@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA4F058F1F5E4D7300167D09 /* SmartpushDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = FA4F05891F5E4D7300167D09 /* SmartpushDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA4F05901F5E4D7300167D09 /* SmartpushDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4F058A1F5E4D7300167D09 /* SmartpushDevice.m */; };
+		FA4F05911F5E4D7300167D09 /* SmartpushHit.h in Headers */ = {isa = PBXBuildFile; fileRef = FA4F058B1F5E4D7300167D09 /* SmartpushHit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA4F05921F5E4D7300167D09 /* SmartpushHit.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4F058C1F5E4D7300167D09 /* SmartpushHit.m */; };
+		FA4F05931F5E4D7300167D09 /* SmartpushUser.h in Headers */ = {isa = PBXBuildFile; fileRef = FA4F058D1F5E4D7300167D09 /* SmartpushUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA4F05941F5E4D7300167D09 /* SmartpushUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4F058E1F5E4D7300167D09 /* SmartpushUser.m */; };
+		FA5370811F70A52500C44F59 /* SmartpushSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5370801F70A52500C44F59 /* SmartpushSDKCore.framework */; };
+		FA5370821F70A52500C44F59 /* SmartpushSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5370801F70A52500C44F59 /* SmartpushSDKCore.framework */; };
+		FA5370831F70A52500C44F59 /* SmartpushSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5370801F70A52500C44F59 /* SmartpushSDKCore.framework */; };
+		FA5370911F70C8B200C44F59 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA53708F1F70C89300C44F59 /* QuartzCore.framework */; };
+		FA5370951F70CAA200C44F59 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5370931F70CAA200C44F59 /* UserNotificationsUI.framework */; };
+		FA8654061F5E3BA2007E8BE2 /* HitType.h in Headers */ = {isa = PBXBuildFile; fileRef = FA8654051F5E3BA2007E8BE2 /* HitType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA947F2F1F68C41A008DBEC4 /* SmartpushSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = FA947F2E1F68C41A008DBEC4 /* SmartpushSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA947F311F68C420008DBEC4 /* NotificationService.h in Headers */ = {isa = PBXBuildFile; fileRef = FA947F301F68C420008DBEC4 /* NotificationService.h */; };
+		FA947F331F68C4C7008DBEC4 /* SmartpushNotificationTest.h in Headers */ = {isa = PBXBuildFile; fileRef = FA947F321F68C49D008DBEC4 /* SmartpushNotificationTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA947F351F68C50E008DBEC4 /* SmartpushNotificationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA947F341F68C50E008DBEC4 /* SmartpushNotificationTest.m */; };
+		FA96B3141F5E359000BE668F /* SmartpushSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = FA96B3131F5E359000BE668F /* SmartpushSDK.m */; };
+		FAF7F7241F4FB36200CD7A6F /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF7F7231F4FB36200CD7A6F /* NotificationViewController.m */; };
+		FAF7F7261F4FB37500CD7A6F /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF7F7251F4FB37500CD7A6F /* NotificationService.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA4F05891F5E4D7300167D09 /* SmartpushDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SmartpushDevice.h; path = SmartpushSDK/Model/SmartpushDevice.h; sourceTree = "<group>"; };
+		FA4F058A1F5E4D7300167D09 /* SmartpushDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SmartpushDevice.m; path = SmartpushSDK/Model/SmartpushDevice.m; sourceTree = "<group>"; };
+		FA4F058B1F5E4D7300167D09 /* SmartpushHit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SmartpushHit.h; path = SmartpushSDK/Model/SmartpushHit.h; sourceTree = "<group>"; };
+		FA4F058C1F5E4D7300167D09 /* SmartpushHit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SmartpushHit.m; path = SmartpushSDK/Model/SmartpushHit.m; sourceTree = "<group>"; };
+		FA4F058D1F5E4D7300167D09 /* SmartpushUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SmartpushUser.h; path = SmartpushSDK/Model/SmartpushUser.h; sourceTree = "<group>"; };
+		FA4F058E1F5E4D7300167D09 /* SmartpushUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SmartpushUser.m; path = SmartpushSDK/Model/SmartpushUser.m; sourceTree = "<group>"; };
+		FA5370801F70A52500C44F59 /* SmartpushSDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartpushSDKCore.framework; sourceTree = "<group>"; };
+		FA53708F1F70C89300C44F59 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FA5370921F70CAA200C44F59 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		FA5370931F70CAA200C44F59 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		FA8654051F5E3BA2007E8BE2 /* HitType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HitType.h; path = SmartpushSDK/Model/HitType.h; sourceTree = "<group>"; };
+		FA947F2E1F68C41A008DBEC4 /* SmartpushSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SmartpushSDK.h; path = SmartpushSDK/SmartpushSDK.h; sourceTree = "<group>"; };
+		FA947F301F68C420008DBEC4 /* NotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		FA947F321F68C49D008DBEC4 /* SmartpushNotificationTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SmartpushNotificationTest.h; path = SmartpushNotificationExtension/SmartpushNotificationTest.h; sourceTree = "<group>"; };
+		FA947F341F68C50E008DBEC4 /* SmartpushNotificationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SmartpushNotificationTest.m; path = SmartpushNotificationExtension/SmartpushNotificationTest.m; sourceTree = "<group>"; };
+		FA96B3131F5E359000BE668F /* SmartpushSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SmartpushSDK.m; path = SmartpushSDK/SmartpushSDK.m; sourceTree = "<group>"; };
+		FAA0F26A1F45533A00473E93 /* SmartpushNotificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SmartpushNotificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA0F26E1F45533A00473E93 /* NotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		FAA0F2741F45533A00473E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAC28E81F7B4EB400AC2AEA /* SmartpushNotificationContent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartpushNotificationContent.entitlements; sourceTree = "<group>"; };
+		FAC36C901F42784A00708DC1 /* SmartpushNotificationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SmartpushNotificationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC36C951F42784A00708DC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACF3C5B1F903CD500E5E17A /* SmartpushNotificationExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartpushNotificationExtension.entitlements; sourceTree = "<group>"; };
+		FAD96E301F3D550D004E828C /* SmartpushSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartpushSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD96E341F3D550D004E828C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = SmartpushSDK/Info.plist; sourceTree = "<group>"; };
+		FAF7F7231F4FB36200CD7A6F /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		FAF7F7251F4FB37500CD7A6F /* NotificationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAA0F2671F45533A00473E93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA5370951F70CAA200C44F59 /* UserNotificationsUI.framework in Frameworks */,
+				FA5370911F70C8B200C44F59 /* QuartzCore.framework in Frameworks */,
+				FA5370831F70A52500C44F59 /* SmartpushSDKCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC36C8D1F42784A00708DC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA5370821F70A52500C44F59 /* SmartpushSDKCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD96E2C1F3D550D004E828C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA5370811F70A52500C44F59 /* SmartpushSDKCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA8653F01F5E3886007E8BE2 /* SmartpushSDK */ = {
+			isa = PBXGroup;
+			children = (
+				FA947F2E1F68C41A008DBEC4 /* SmartpushSDK.h */,
+				FA96B3131F5E359000BE668F /* SmartpushSDK.m */,
+				FA947F321F68C49D008DBEC4 /* SmartpushNotificationTest.h */,
+				FA947F341F68C50E008DBEC4 /* SmartpushNotificationTest.m */,
+				FAD96E341F3D550D004E828C /* Info.plist */,
+				FA8653F11F5E3898007E8BE2 /* Model */,
+				FAC36C911F42784A00708DC1 /* SmartpushNotificationExtension */,
+				FAA0F26D1F45533A00473E93 /* SmartpushNotificationContent */,
+			);
+			name = SmartpushSDK;
+			sourceTree = "<group>";
+		};
+		FA8653F11F5E3898007E8BE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA8654051F5E3BA2007E8BE2 /* HitType.h */,
+				FA4F05891F5E4D7300167D09 /* SmartpushDevice.h */,
+				FA4F058A1F5E4D7300167D09 /* SmartpushDevice.m */,
+				FA4F058B1F5E4D7300167D09 /* SmartpushHit.h */,
+				FA4F058C1F5E4D7300167D09 /* SmartpushHit.m */,
+				FA4F058D1F5E4D7300167D09 /* SmartpushUser.h */,
+				FA4F058E1F5E4D7300167D09 /* SmartpushUser.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FAA0F26D1F45533A00473E93 /* SmartpushNotificationContent */ = {
+			isa = PBXGroup;
+			children = (
+				FAAC28E81F7B4EB400AC2AEA /* SmartpushNotificationContent.entitlements */,
+				FAA0F26E1F45533A00473E93 /* NotificationViewController.h */,
+				FAF7F7231F4FB36200CD7A6F /* NotificationViewController.m */,
+				FAA0F2741F45533A00473E93 /* Info.plist */,
+			);
+			path = SmartpushNotificationContent;
+			sourceTree = "<group>";
+		};
+		FAC36C911F42784A00708DC1 /* SmartpushNotificationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				FACF3C5B1F903CD500E5E17A /* SmartpushNotificationExtension.entitlements */,
+				FA947F301F68C420008DBEC4 /* NotificationService.h */,
+				FAF7F7251F4FB37500CD7A6F /* NotificationService.m */,
+				FAC36C951F42784A00708DC1 /* Info.plist */,
+			);
+			path = SmartpushNotificationExtension;
+			sourceTree = "<group>";
+		};
+		FAC36C9E1F42785C00708DC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA5370921F70CAA200C44F59 /* UserNotifications.framework */,
+				FA5370931F70CAA200C44F59 /* UserNotificationsUI.framework */,
+				FA53708F1F70C89300C44F59 /* QuartzCore.framework */,
+				FA5370801F70A52500C44F59 /* SmartpushSDKCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAD96E261F3D550D004E828C = {
+			isa = PBXGroup;
+			children = (
+				FA8653F01F5E3886007E8BE2 /* SmartpushSDK */,
+				FAC36C9E1F42785C00708DC1 /* Frameworks */,
+				FAD96E311F3D550D004E828C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAD96E311F3D550D004E828C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAD96E301F3D550D004E828C /* SmartpushSDK.framework */,
+				FAC36C901F42784A00708DC1 /* SmartpushNotificationExtension.appex */,
+				FAA0F26A1F45533A00473E93 /* SmartpushNotificationContent.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FAD96E2D1F3D550D004E828C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA8654061F5E3BA2007E8BE2 /* HitType.h in Headers */,
+				FA4F058F1F5E4D7300167D09 /* SmartpushDevice.h in Headers */,
+				FA947F2F1F68C41A008DBEC4 /* SmartpushSDK.h in Headers */,
+				FA4F05931F5E4D7300167D09 /* SmartpushUser.h in Headers */,
+				FA4F05911F5E4D7300167D09 /* SmartpushHit.h in Headers */,
+				FA947F331F68C4C7008DBEC4 /* SmartpushNotificationTest.h in Headers */,
+				FA947F311F68C420008DBEC4 /* NotificationService.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FAA0F2691F45533A00473E93 /* SmartpushNotificationContent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA0F2751F45533A00473E93 /* Build configuration list for PBXNativeTarget "SmartpushNotificationContent" */;
+			buildPhases = (
+				FAA0F2661F45533A00473E93 /* Sources */,
+				FAA0F2671F45533A00473E93 /* Frameworks */,
+				FAA0F2681F45533A00473E93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartpushNotificationContent;
+			productName = SmartpushNotificationContent;
+			productReference = FAA0F26A1F45533A00473E93 /* SmartpushNotificationContent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		FAC36C8F1F42784A00708DC1 /* SmartpushNotificationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC36C981F42784A00708DC1 /* Build configuration list for PBXNativeTarget "SmartpushNotificationExtension" */;
+			buildPhases = (
+				FAC36C8C1F42784A00708DC1 /* Sources */,
+				FAC36C8D1F42784A00708DC1 /* Frameworks */,
+				FAC36C8E1F42784A00708DC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartpushNotificationExtension;
+			productName = SmartpushNotificationExtension;
+			productReference = FAC36C901F42784A00708DC1 /* SmartpushNotificationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		FAD96E2F1F3D550D004E828C /* SmartpushSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAD96E381F3D550D004E828C /* Build configuration list for PBXNativeTarget "SmartpushSDK" */;
+			buildPhases = (
+				FAD96E2B1F3D550D004E828C /* Sources */,
+				FAD96E2C1F3D550D004E828C /* Frameworks */,
+				FAD96E2D1F3D550D004E828C /* Headers */,
+				FAD96E2E1F3D550D004E828C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartpushSDK;
+			productName = SmartpushManagerSDK;
+			productReference = FAD96E301F3D550D004E828C /* SmartpushSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAD96E271F3D550D004E828C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Smartpush;
+				TargetAttributes = {
+					FAA0F2691F45533A00473E93 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7GGYTT3FER;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					FAC36C8F1F42784A00708DC1 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7GGYTT3FER;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+						};
+					};
+					FAD96E2F1F3D550D004E828C = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = FAD96E2A1F3D550D004E828C /* Build configuration list for PBXProject "SmartpushSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAD96E261F3D550D004E828C;
+			productRefGroup = FAD96E311F3D550D004E828C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAD96E2F1F3D550D004E828C /* SmartpushSDK */,
+				FAC36C8F1F42784A00708DC1 /* SmartpushNotificationExtension */,
+				FAA0F2691F45533A00473E93 /* SmartpushNotificationContent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAA0F2681F45533A00473E93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC36C8E1F42784A00708DC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD96E2E1F3D550D004E828C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAA0F2661F45533A00473E93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF7F7241F4FB36200CD7A6F /* NotificationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC36C8C1F42784A00708DC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF7F7261F4FB37500CD7A6F /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD96E2B1F3D550D004E828C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA4F05901F5E4D7300167D09 /* SmartpushDevice.m in Sources */,
+				FA96B3141F5E359000BE668F /* SmartpushSDK.m in Sources */,
+				FA947F351F68C50E008DBEC4 /* SmartpushNotificationTest.m in Sources */,
+				FA4F05941F5E4D7300167D09 /* SmartpushUser.m in Sources */,
+				FA4F05921F5E4D7300167D09 /* SmartpushHit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FAA0F2761F45533A00473E93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SmartpushNotificationContent/SmartpushNotificationContent.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SmartpushNotificationContent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SmartpushNotificationContent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FAA0F2771F45533A00473E93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SmartpushNotificationContent/SmartpushNotificationContent.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SmartpushNotificationContent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SmartpushNotificationContent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FAC36C961F42784A00708DC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SmartpushNotificationExtension/SmartpushNotificationExtension.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SmartpushNotificationExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SmartpushNotificationExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FAC36C971F42784A00708DC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SmartpushNotificationExtension/SmartpushNotificationExtension.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SmartpushNotificationExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SmartpushNotificationExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FAD96E361F3D550D004E828C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FAD96E371F3D550D004E828C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FAD96E391F3D550D004E828C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartpushSDK",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SmartpushSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SDK";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAD96E3A1F3D550D004E828C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartpushSDK",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SmartpushSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SDK";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAA0F2751F45533A00473E93 /* Build configuration list for PBXNativeTarget "SmartpushNotificationContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA0F2761F45533A00473E93 /* Debug */,
+				FAA0F2771F45533A00473E93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAC36C981F42784A00708DC1 /* Build configuration list for PBXNativeTarget "SmartpushNotificationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC36C961F42784A00708DC1 /* Debug */,
+				FAC36C971F42784A00708DC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAD96E2A1F3D550D004E828C /* Build configuration list for PBXProject "SmartpushSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD96E361F3D550D004E828C /* Debug */,
+				FAD96E371F3D550D004E828C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAD96E381F3D550D004E828C /* Build configuration list for PBXNativeTarget "SmartpushSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD96E391F3D550D004E828C /* Debug */,
+				FAD96E3A1F3D550D004E828C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAD96E271F3D550D004E828C /* Project object */;
+}

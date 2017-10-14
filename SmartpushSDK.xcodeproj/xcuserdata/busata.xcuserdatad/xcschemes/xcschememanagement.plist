@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>SmartpushSDK.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>FAA0F2511F454BBE00473E93</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAA0F2691F45533A00473E93</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAC36C8F1F42784A00708DC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAC36C9C1F42785C00708DC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAD96E2F1F3D550D004E828C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAE67E1B1F428E8A00FC48CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAE67E461F429A5400FC48CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
