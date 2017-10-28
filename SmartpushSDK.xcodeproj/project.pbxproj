@@ -369,7 +369,7 @@
 				);
 				INFOPLIST_FILE = SmartpushNotificationContent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SmartpushNotificationContent";
+				PRODUCT_BUNDLE_IDENTIFIER = "-YOUR-BUNDLE-ID-.SmartpushNotificationContent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -389,7 +389,7 @@
 				);
 				INFOPLIST_FILE = SmartpushNotificationContent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SmartpushNotificationContent";
+				PRODUCT_BUNDLE_IDENTIFIER = "-YOUR-BUNDLE-ID-.SmartpushNotificationContent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -409,7 +409,7 @@
 				);
 				INFOPLIST_FILE = SmartpushNotificationExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SmartpushNotificationExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = "-YOUR-BUNDLE-ID-.SmartpushNotificationExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -430,7 +430,7 @@
 				);
 				INFOPLIST_FILE = SmartpushNotificationExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.smartpush.ios-smartpush-sample.SmartpushNotificationExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = "-YOUR-BUNDLE-ID-.SmartpushNotificationExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
