@@ -30,7 +30,7 @@ Clique [aqui](https://developer.apple.com/library/content/documentation/Swift/Co
 - **SMARTPUSH_DevKey**
 - **SMARTPUSH_AppKey**
 - **SMARTPUSH_HitURL** (optional) - URL para receber hits de click e
-recebimento;
+recebimento;  
 **Observação**: Caso não possua esses códigos envie um email para suporte@getmo.com.br
 
 <br>
