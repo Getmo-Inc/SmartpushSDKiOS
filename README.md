@@ -13,9 +13,9 @@
 <br>
 
 3. Adicione os recursos da SDK no seu projeto através dos **Embedded Binaries**:
-![](https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/embedded.png)
+<img src="https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/embedded.png" width="500">
 - Selecione os 3 itens:
-![](https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/libs_choose.png)
+<img src="https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/libs_choose.png" width="500">
 
 <br>
 
@@ -37,7 +37,7 @@ Clique [aqui](https://developer.apple.com/library/content/documentation/Swift/Co
 - **SMARTPUSH_DevKey**
 - **SMARTPUSH_AppKey**
 - **SMARTPUSH_HitURL** (optional) - URL para receber hits de click e
-recebimento;  
+recebimento;
 **Observação**: Caso não possua esses códigos envie um email para suporte@getmo.com.br
 
 <br>
@@ -242,4 +242,4 @@ Para monitorar e permitir o envio de mensagens push quando seus usuários ingres
 ## <a name="remove_old_sdk"></a>Removendo antiga SDK
 Para remover a antiga SDK que utilizava o arquivo **.framework**, selecione **SmartpushSDK.framework** no seu projeto e **delete-o** movendo para a lixeira.
 
-![](https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/remove_old.png)
+<img src="https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/remove_old.png" width="400">
