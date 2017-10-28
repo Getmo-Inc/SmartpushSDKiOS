@@ -1,7 +1,7 @@
 # SmartpushSDK iOS
 ## Instalação
-**Obs:** Caso seu projeto já utiliza s sdk através do **.framework**, é necessário [remover-lo](#remove_old_sdk) antes de continuar.
-1. Adicione este projeto como Submodulo de seu projeto Git, ou Faça [Download](https://github.com/Getmo-Inc/SmartpushSDKiOS/archive/master.zip).
+**Obs:** Caso seu projeto já utilize SDK através do **.framework**, é necessário [remover-lo](#remove_old_sdk) antes de continuar.
+1. Adicione este projeto como Submodulo de seu projeto Git, ou faça [Download](https://github.com/Getmo-Inc/SmartpushSDKiOS/archive/master.zip).
 ```
     $ git submodule add https://github.com/Getmo-Inc/SmartpushSDKiOS.git
 ```
@@ -26,12 +26,12 @@ Clique [aqui](https://developer.apple.com/library/content/documentation/Swift/Co
 
 <br>
 
-5. No aquivo **info.plist** do seu projeto adicione as seguintes chaves e seus respectivos valores:
+5. No arquivo **info.plist** do seu projeto adicione as seguintes chaves e seus respectivos valores:
 - **SMARTPUSH_DevKey**
 - **SMARTPUSH_AppKey**
 - **SMARTPUSH_HitURL** (optional) - URL para receber hits de click e
 recebimento;
-**Observação**: Caso não possua esses código envie um email para suporte@getmo.com.br
+**Observação**: Caso não possua esses códigos envie um email para suporte@getmo.com.br
 
 <br>
 
@@ -58,6 +58,9 @@ recebimento;
 <br>
 
 7. No arquivo **UIApplicationDelegate** implemente o delegate **SmartpushSDKDelegate**.
+
+<br>
+
 8. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didFinishLaunchingWithOptions**:
 
 #### Objective-C
@@ -208,28 +211,28 @@ func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent noti
 ```
 
 
-**Pronto a SDK SMARTPUSH está integrada a sua app! Sua app está pronta para receber mensagens push. Simples, não?**
+**Pronto! A SDK SMARTPUSH está integrada a sua app! Sua app está pronta para receber mensagens push. Simples, não?**
 
 <br>
 
 ## Gerenciando TAGs, Blacklist e Nearzones
 ### TAGs
-A SDK provê mecanismos para que as apps possam criar e salvar tags que depois serão utilizadas na filtragem dos conjuntos para envio direcionado de mensagens push através da API REST.
+A SDK provê mecanismos para que as apps possam criar e salvar tags, que depois serão utilizadas na filtragem dos conjuntos para envio direcionado de mensagens push através da API REST.
 
-Para configurar uma TAG utilize o método disponível na classe Smartpush.setTag. Este método recebe como parâmetros uma chave e um valor.
+Para configurar uma TAG utilize o método disponível na classe **SmartpushSDK.setTag**. Este método recebe como parâmetros uma chave e um valor.
 
 ### Blacklist
 A SDK provê mecanismos para que os usuários possam cancelar/ativar o recebimento de mensagens push.
 
-Para cancelar/ativar o recebimento de mensagens push forneça um meio para que o usuário possa utilizar o método disponível na classe Smartpush.blacklist. Este método recebe como parâmetros um boolean.
+Para cancelar/ativar o recebimento de mensagens push forneça um meio para que o usuário possa utilizar o método disponível na classe **SmartpushSDK.blacklist**. Este método recebe como parâmetros um boolean.
 ### Nearzones
-A SDK provê mecanismos para que possam ser disparadas campanhas de mensagens push quando os usuários entrarem em regiões especificas.
+A SDK provê mecanismos para que possam ser disparadas campanhas de mensagens push quando os usuários entrarem em regiões específicas.
 
-Para monitorar e permitir o envio de mensagens push quando seus usuários ingressarem em determinadas áreas utilize o método disponível na classe Smartpush.nearzones. Este método recebe como parâmetros a latitude e a longitude.
+Para monitorar e permitir o envio de mensagens push quando seus usuários ingressarem em determinadas áreas, utilize o método disponível na classe ***SmartpushSDK.nearzones**. Este método recebe como parâmetros a latitude e a longitude.
 
 <br>
 
 ## <a name="remove_old_sdk"></a>Removendo antiga SDK
-Para remover a antiga SDK que utilizáva o arquivo **.framework**, selecione **SmartpushSDK.framework** no seu projeto e **delete-o** movendo para a lixeira.
+Para remover a antiga SDK que utilizava o arquivo **.framework**, selecione **SmartpushSDK.framework** no seu projeto e **delete-o** movendo para a lixeira.
 
 ![](https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/remove_old.png)
