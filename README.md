@@ -14,7 +14,7 @@
 
 3. Agora precisamos configurar o **Bundle Id** e a **assinatura** do seu app nos **App Extensions** da SDK:
 - Selecione o arquivo **SmartpushSDK.xcodeproj** e depois o target **SmartpushNotificationExtension**.
-- Agora substitua apenas o **YOUR-BUNDLE-ID** pelo **Bundle Id** do seu app (ex **com.MyApp.SmartpushNotificationExtension**).
+- Agora substitua apenas o **YOUR-BUNDLE-ID** pelo **Bundle Id** do seu app. Exemplo **com.MyApp.SmartpushNotificationExtension**.
 - Configure a assinatura do **App Extension** conforme o seu app.
 - Repita o procedimento para o target **SmartpushNotificationContent**.
 ![](https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/extension.png)
@@ -228,7 +228,7 @@ Para cancelar/ativar o recebimento de mensagens push forneça um meio para que o
 ### Nearzones
 A SDK provê mecanismos para que possam ser disparadas campanhas de mensagens push quando os usuários entrarem em regiões específicas.
 
-Para monitorar e permitir o envio de mensagens push quando seus usuários ingressarem em determinadas áreas, utilize o método disponível na classe ***SmartpushSDK.nearzones**. Este método recebe como parâmetros a latitude e a longitude.
+Para monitorar e permitir o envio de mensagens push quando seus usuários ingressarem em determinadas áreas, utilize o método disponível na classe **SmartpushSDK.nearzones**. Este método recebe como parâmetros a latitude e a longitude.
 
 <br>
 
