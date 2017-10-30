@@ -28,8 +28,8 @@
 
 <br>
 
-5. Outra coisa muito importante, é fazer a ligação do seu app com os **App Extensions** da SDK. Para isso vá até o menu de compatibilidade do seu app, habilite o **App Group** e marque o grupo **group.smartpushsdk**:
-![](https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/extension.png)
+5. Outra coisa muito importante, é fazer a ligação do seu app com os **App Extensions** da SDK. Para isso vá até o menu de **Capablities** do seu app, habilite o **App Groups** e marque o grupo **group.smartpushsdk**:
+![](https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/app_group.png)
 
 <br>
 
