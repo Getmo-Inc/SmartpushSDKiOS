@@ -28,21 +28,26 @@
 
 <br>
 
-5. Caso sua aplicação seja em Swift, utilize um **Bridging-Header** para realizar a integração com o framework.
+5. Outra coisa muito importante, é fazer a ligação do seu app com os **App Extensions** da SDK. Para isso vá até o menu de **Capablities** do seu app, habilite o **App Groups** e marque o grupo **group.smartpushsdk**:
+![](https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/app_group.png)
+
+<br>
+
+6. Caso sua aplicação seja em Swift, utilize um **Bridging-Header** para realizar a integração com o framework.
 Clique [aqui](https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html) para mais informações.
 
 <br>
 
-6. No arquivo **info.plist** do seu projeto adicione as seguintes chaves e seus respectivos valores:
+7. No arquivo **info.plist** do seu projeto adicione as seguintes chaves e seus respectivos valores:
 - **SMARTPUSH_DevKey**
 - **SMARTPUSH_AppKey**
 - **SMARTPUSH_HitURL** (optional) - URL para receber hits de click e
-recebimento;
+recebimento;  
 **Observação**: Caso não possua esses códigos envie um email para suporte@getmo.com.br
 
 <br>
 
-7. Ainda no arquivo **info.plist** adicione o código abaixo para liberar a comunicação com a nossa API.
+8. Ainda no arquivo **info.plist** adicione o código abaixo para liberar a comunicação com a nossa API.
 ```
 <key>NSAppTransportSecurity</key>
 <dict>
@@ -64,11 +69,11 @@ recebimento;
 
 <br>
 
-8. No arquivo **UIApplicationDelegate** implemente o delegate **SmartpushSDKDelegate**.
+9. No arquivo **UIApplicationDelegate** implemente o delegate **SmartpushSDKDelegate**.
 
 <br>
 
-9. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didFinishLaunchingWithOptions**:
+10. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didFinishLaunchingWithOptions**:
 
 #### Objective-C
 ```
@@ -100,7 +105,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 <br>
 
-10. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didFailToRegisterForRemoteNotificationsWithError**:
+11. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didFailToRegisterForRemoteNotificationsWithError**:
 
 #### Objective-C
 ```
@@ -118,7 +123,7 @@ func application(_ application: UIApplication, didFailToRegisterForRemoteNotific
 
 <br>
 
-11. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didRegisterForRemoteNotificationsWithDeviceToken**:
+12. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didRegisterForRemoteNotificationsWithDeviceToken**:
 
 #### Objective-C
 ```
@@ -136,7 +141,7 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 
 <br>
 
-12. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didReceiveRemoteNotification**:
+13. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didReceiveRemoteNotification**:
 
 #### Objective-C
 ```
@@ -154,7 +159,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 
 <br>
 
-13. Ainda no arquivo **UIApplicationDelegate**, para compatibilidade como iOS8+, adicione o código abaixo no corpo do método **didRegisterUserNotificationSettings**:
+14. Ainda no arquivo **UIApplicationDelegate**, para compatibilidade como iOS8+, adicione o código abaixo no corpo do método **didRegisterUserNotificationSettings**:
 
 #### Objective-C
 ```
@@ -172,7 +177,7 @@ func application(_ application: UIApplication, didRegister notificationSettings:
 
 <br>
 
-14. Para capturar e tratar as mensagens push recebidas, adicione o código no corpo do método **onPushAccepted** no arquivo **UIApplicationDelegate**. Este método será chamado sempre que uma notificação for recebida ou quando o aplicativo for aberto ao clicar em uma notificação:
+15. Para capturar e tratar as mensagens push recebidas, adicione o código no corpo do método **onPushAccepted** no arquivo **UIApplicationDelegate**. Este método será chamado sempre que uma notificação for recebida ou quando o aplicativo for aberto ao clicar em uma notificação:
 
 #### Objective-C
 ```
@@ -200,7 +205,7 @@ func onPushAccepted(_ push: [AnyHashable : Any]!, andOpenFromPush openFromPush: 
 
 ### Melhorias para o iOS 10+
 
-15. Para que seu aplicativo receba as notificações pela central do iOS enquanto estiver em primeiro plano, importe **UserNotifications** e adicione o código no corpo do método **UIApplicationDelegate** no arquivo **UIApplicationDelegate**.
+16. Para que seu aplicativo receba as notificações pela central do iOS enquanto estiver em primeiro plano, importe **UserNotifications** e adicione o código no corpo do método **UIApplicationDelegate** no arquivo **UIApplicationDelegate**.
 
 #### Objective-C
 ```
@@ -226,16 +231,59 @@ func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent noti
 ### TAGs
 A SDK provê mecanismos para que as apps possam criar e salvar tags, que depois serão utilizadas na filtragem dos conjuntos para envio direcionado de mensagens push através da API REST.
 
-Para configurar uma TAG utilize o método disponível na classe **SmartpushSDK.setTag**. Este método recebe como parâmetros uma chave e um valor.
+Para definir uma TAG de **String**, ou remove-la utilize o método abaixo:
+
+#### Objective-C
+```
+[[SmartpushSDK sharedInstance]setString:@"value" forTag:@"key"];
+[[SmartpushSDK sharedInstance]delStringTag:@"key"];
+```
+
+#### Swift 4
+```
+SmartpushSDK.sharedInstance().setString("value", forTag: "key")
+SmartpushSDK.sharedInstance().delStringTag(key)
+```  
+Exitem **5** tipos de TAGs que podem ser definidas:
+- **String**
+- **Number**
+- **Boolean**
+- **Date**
+- **Array**
+
+<br>
 
 ### Blacklist
-A SDK provê mecanismos para que os usuários possam cancelar/ativar o recebimento de mensagens push.
+A SDK provê mecanismos para que os usuários possam cancelar/ativar o recebimento de mensagens push. Para isso utilize o método abaixo:
 
-Para cancelar/ativar o recebimento de mensagens push forneça um meio para que o usuário possa utilizar o método disponível na classe **SmartpushSDK.blacklist**. Este método recebe como parâmetros um boolean.
+#### Objective-C
+```
+[[SmartpushSDK sharedInstance]blockUser:true];
+```
+
+#### Swift 4
+```
+SmartpushSDK.sharedInstance().blockUser(true)
+```  
+
+Para cancelar/ativar o recebimento de mensagens push, forneça um meio para que o usuário possa informar isso dentro do seu app. 
+
+<br>
+
 ### Nearzones
 A SDK provê mecanismos para que possam ser disparadas campanhas de mensagens push quando os usuários entrarem em regiões específicas.
 
-Para monitorar e permitir o envio de mensagens push quando seus usuários ingressarem em determinadas áreas, utilize o método disponível na classe **SmartpushSDK.nearzones**. Este método recebe como parâmetros a latitude e a longitude.
+Para monitorar e permitir o envio de mensagens push quando seus usuários ingressarem em determinadas áreas, utilize o método abaixo:
+
+#### Objective-C
+```
+[[SmartpushSDK sharedInstance]nearestZoneWithLatitude:0.0 andLongitude:0.0];
+```
+
+#### Swift 4
+```
+SmartpushSDK.sharedInstance().nearestZone(withLatitude: 0.0, andLongitude: 0.0)
+```  
 
 <br>
 
