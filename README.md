@@ -28,7 +28,7 @@
 
 <br>
 
-5. Outra coisa muito importante, é fazer a ligação do seu app com os **App Extensions** da SDK. Para isso vá até o menu de **Capablities** do seu app, habilite o **App Groups** e marque o grupo **group.smartpushsdk**:
+5. Outra coisa muito importante, é fazer a ligação do seu app com os **App Extensions** da SDK. Para isso vá até o menu de **Capablities** do seu app, habilite o **App Groups**, crie uma nova chave e deixa-a marcada. Repida o processo para o **SmartpushNotificationExtension** e para o **SmartpushNotificationContent**:
 ![](https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/app_group.png)
 
 <br>
@@ -41,6 +41,7 @@ Clique [aqui](https://developer.apple.com/library/content/documentation/Swift/Co
 7. No arquivo **info.plist** do seu projeto adicione as seguintes chaves e seus respectivos valores:
 - **SMARTPUSH_DevKey**
 - **SMARTPUSH_AppKey**
+- **SMARTPUSH_AppGroupKey**: Chave criada no **App Groups**
 - **SMARTPUSH_HitURL** (optional) - URL para receber hits de click e
 recebimento;  
 **Observação**: Caso não possua esses códigos envie um email para suporte@getmo.com.br
