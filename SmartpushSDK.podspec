@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SmartpushSDK'
-  s.version          = '0.0.3'
+  s.version          = '2.0.1'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.homepage         = 'https://github.com/rodrigobusata/SmartpushSDK.git'
   s.authors           = { 'Getmo' => 'contato@getmo.com.br' }

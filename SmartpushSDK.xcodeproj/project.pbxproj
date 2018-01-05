@@ -13,9 +13,6 @@
 		FA4F05921F5E4D7300167D09 /* SmartpushHit.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4F058C1F5E4D7300167D09 /* SmartpushHit.m */; };
 		FA4F05931F5E4D7300167D09 /* SmartpushUser.h in Headers */ = {isa = PBXBuildFile; fileRef = FA4F058D1F5E4D7300167D09 /* SmartpushUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA4F05941F5E4D7300167D09 /* SmartpushUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4F058E1F5E4D7300167D09 /* SmartpushUser.m */; };
-		FA5370811F70A52500C44F59 /* SmartpushSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5370801F70A52500C44F59 /* SmartpushSDKCore.framework */; };
-		FA5370821F70A52500C44F59 /* SmartpushSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5370801F70A52500C44F59 /* SmartpushSDKCore.framework */; };
-		FA5370831F70A52500C44F59 /* SmartpushSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5370801F70A52500C44F59 /* SmartpushSDKCore.framework */; };
 		FA5370911F70C8B200C44F59 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA53708F1F70C89300C44F59 /* QuartzCore.framework */; };
 		FA5370951F70CAA200C44F59 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5370931F70CAA200C44F59 /* UserNotificationsUI.framework */; };
 		FA8654061F5E3BA2007E8BE2 /* HitType.h in Headers */ = {isa = PBXBuildFile; fileRef = FA8654051F5E3BA2007E8BE2 /* HitType.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +21,9 @@
 		FA947F331F68C4C7008DBEC4 /* SmartpushNotificationTest.h in Headers */ = {isa = PBXBuildFile; fileRef = FA947F321F68C49D008DBEC4 /* SmartpushNotificationTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA947F351F68C50E008DBEC4 /* SmartpushNotificationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA947F341F68C50E008DBEC4 /* SmartpushNotificationTest.m */; };
 		FA96B3141F5E359000BE668F /* SmartpushSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = FA96B3131F5E359000BE668F /* SmartpushSDK.m */; };
+		FAEBA9991FFF2F5B005645DB /* SmartpushSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5370801F70A52500C44F59 /* SmartpushSDKCore.framework */; };
+		FAEBA99A1FFF2F61005645DB /* SmartpushSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5370801F70A52500C44F59 /* SmartpushSDKCore.framework */; };
+		FAEBA99B1FFF2F67005645DB /* SmartpushSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5370801F70A52500C44F59 /* SmartpushSDKCore.framework */; };
 		FAF7F7241F4FB36200CD7A6F /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF7F7231F4FB36200CD7A6F /* NotificationViewController.m */; };
 		FAF7F7261F4FB37500CD7A6F /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF7F7251F4FB37500CD7A6F /* NotificationService.m */; };
 /* End PBXBuildFile section */
@@ -65,7 +65,7 @@
 			files = (
 				FA5370951F70CAA200C44F59 /* UserNotificationsUI.framework in Frameworks */,
 				FA5370911F70C8B200C44F59 /* QuartzCore.framework in Frameworks */,
-				FA5370831F70A52500C44F59 /* SmartpushSDKCore.framework in Frameworks */,
+				FAEBA99B1FFF2F67005645DB /* SmartpushSDKCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA5370821F70A52500C44F59 /* SmartpushSDKCore.framework in Frameworks */,
+				FAEBA99A1FFF2F61005645DB /* SmartpushSDKCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA5370811F70A52500C44F59 /* SmartpushSDKCore.framework in Frameworks */,
+				FAEBA9991FFF2F5B005645DB /* SmartpushSDKCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +253,7 @@
 				TargetAttributes = {
 					FAA0F2691F45533A00473E93 = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -262,7 +262,7 @@
 					};
 					FAC36C8F1F42784A00708DC1 = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -359,7 +359,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SmartpushNotificationContent/SmartpushNotificationContent.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -380,7 +380,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SmartpushNotificationContent/SmartpushNotificationContent.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -401,7 +401,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SmartpushNotificationExtension/SmartpushNotificationExtension.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -423,7 +423,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SmartpushNotificationExtension/SmartpushNotificationExtension.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
