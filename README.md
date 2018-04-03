@@ -48,33 +48,11 @@ recebimento;
 
 <br>
 
-8. Ainda no arquivo **info.plist** adicione o código abaixo para liberar a comunicação com a nossa API.
-```
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <false/>
-    <key>NSExceptionDomains</key>
-    <dict>
-        <key>api.getmo.com.br</key>
-        <dict>
-            <key>NSIncludesSubdomains</key>
-            <true/>
-            <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-            <true/>
-            <key>NSTemporaryExceptionMinimumTLSVersion</key>
-            <string>TLSv1.1</string> </dict>
-    </dict>
-</dict>
-```
+8. No arquivo **UIApplicationDelegate** implemente o delegate **SmartpushSDKDelegate**.
 
 <br>
 
-9. No arquivo **UIApplicationDelegate** implemente o delegate **SmartpushSDKDelegate**.
-
-<br>
-
-10. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didFinishLaunchingWithOptions**:
+9. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didFinishLaunchingWithOptions**:
 
 #### Objective-C
 ```
@@ -106,7 +84,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 <br>
 
-11. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didFailToRegisterForRemoteNotificationsWithError**:
+10. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didFailToRegisterForRemoteNotificationsWithError**:
 
 #### Objective-C
 ```
@@ -124,7 +102,7 @@ func application(_ application: UIApplication, didFailToRegisterForRemoteNotific
 
 <br>
 
-12. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didRegisterForRemoteNotificationsWithDeviceToken**:
+11. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didRegisterForRemoteNotificationsWithDeviceToken**:
 
 #### Objective-C
 ```
@@ -142,7 +120,7 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 
 <br>
 
-13. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didReceiveRemoteNotification**:
+12. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didReceiveRemoteNotification**:
 
 #### Objective-C
 ```
@@ -160,7 +138,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 
 <br>
 
-14. Ainda no arquivo **UIApplicationDelegate**, para compatibilidade como iOS8+, adicione o código abaixo no corpo do método **didRegisterUserNotificationSettings**:
+13. Ainda no arquivo **UIApplicationDelegate**, para compatibilidade como iOS8+, adicione o código abaixo no corpo do método **didRegisterUserNotificationSettings**:
 
 #### Objective-C
 ```
@@ -178,7 +156,7 @@ func application(_ application: UIApplication, didRegister notificationSettings:
 
 <br>
 
-15. Para capturar e tratar as mensagens push recebidas, adicione o código no corpo do método **onPushAccepted** no arquivo **UIApplicationDelegate**. Este método será chamado sempre que uma notificação for recebida ou quando o aplicativo for aberto ao clicar em uma notificação:
+14. Para capturar e tratar as mensagens push recebidas, adicione o código no corpo do método **onPushAccepted** no arquivo **UIApplicationDelegate**. Este método será chamado sempre que uma notificação for recebida ou quando o aplicativo for aberto ao clicar em uma notificação:
 
 #### Objective-C
 ```
@@ -206,7 +184,7 @@ func onPushAccepted(_ push: [AnyHashable : Any]!, andOpenFromPush openFromPush: 
 
 ### Melhorias para o iOS 10+
 
-16. Para que seu aplicativo receba as notificações pela central do iOS enquanto estiver em primeiro plano, importe **UserNotifications** e adicione o código no corpo do método **UIApplicationDelegate** no arquivo **UIApplicationDelegate**.
+15. Para que seu aplicativo receba as notificações pela central do iOS enquanto estiver em primeiro plano, importe **UserNotifications** e adicione o código no corpo do método **UIApplicationDelegate** no arquivo **UIApplicationDelegate**.
 
 #### Objective-C
 ```
