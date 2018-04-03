@@ -17,11 +17,11 @@
 @implementation SmartpushHit
 
 - (id)init {
-    _hitCore = [SmartpushHitCore init];
+    _hitCore = [SmartpushHitCore new];
     return self;
 }
 
--(void)setValue:(NSString *)value forField:(SmartpushHitField)field {
+- (void)setValue:(NSString *)value forField:(SmartpushHitField)field {
     [_hitCore setValue:value forField:field];
 }
 
@@ -31,6 +31,10 @@
 
 - (NSString *)getValueForField:(SmartpushHitField)field {
     return [_hitCore getValueForField:field];
+}
+
+-(id)instance {
+    return _hitCore;
 }
 
 @end

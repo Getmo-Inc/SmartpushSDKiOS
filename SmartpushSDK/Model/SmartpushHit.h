@@ -22,4 +22,6 @@ typedef NS_ENUM(NSUInteger, SmartpushHitField)
 - (NSString *)getValueForField:(SmartpushHitField)field;
 - (NSString *)stringForField:(SmartpushHitField)field;
 
+- (id)instance;
+
 @end

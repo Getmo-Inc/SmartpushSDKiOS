@@ -4,8 +4,7 @@
 //
 //  Created by William Hass on 7/27/14.
 //  Copyright (c) 2014 William Hass. All rights reserved.
-//  Version 2.0.2
-
+//  Version 2.1.0
 
 
 #import <UIKit/UIKit.h>

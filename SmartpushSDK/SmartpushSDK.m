@@ -138,11 +138,11 @@
 }
 
 - (void)sendHit:(SmartpushHit *)smartpushHit {
-    [[SmartpushSDKCore sharedInstance] sendHit:smartpushHit];
+    [[SmartpushSDKCore sharedInstance] sendHit:[smartpushHit instance]];
 }
 
 - (void)sendHit:(SmartpushHit *)smartpushHit WithAction:(HitType) action {
-    [[SmartpushSDKCore sharedInstance] sendHit:smartpushHit WithAction:action];
+    [[SmartpushSDKCore sharedInstance] sendHit:[smartpushHit instance] WithAction:action];
 }
 
 - (void)checkHitQueue {
