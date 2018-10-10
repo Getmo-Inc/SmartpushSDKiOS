@@ -10,7 +10,7 @@
 
 @interface SmartpushNotificationService : UNNotificationServiceExtension
 
-+ (void) requestTestNotification: (NSInteger) type completion:(void (^)(BOOL))completionBlock;
++ (void) requestTestNotification: (NSInteger) type isProd:(BOOL) isProd completion:(void (^)(BOOL))completionBlock;
 
 @end
 

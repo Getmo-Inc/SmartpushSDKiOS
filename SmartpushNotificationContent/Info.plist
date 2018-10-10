@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>XPC!</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.1.0</string>
+	<string>$(CURRENT_PROJECT_VERSION_STR)</string>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -29,10 +29,15 @@
 	<dict>
 		<key>NSExtensionAttributes</key>
 		<dict>
+			<key>New item</key>
+			<string></string>
 			<key>UNNotificationExtensionCategory</key>
-			<string>CARROUSSEL</string>
+			<array>
+				<string>AUDIO</string>
+				<string>CARROUSSEL</string>
+			</array>
 			<key>UNNotificationExtensionInitialContentSizeRatio</key>
-			<real>1</real>
+			<real>0.10000000000000001</real>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.usernotifications.content-extension</string>

@@ -10,6 +10,8 @@
 
 @interface SmartpushHitCore : NSObject
 
+@property NSInteger action;
+
 - (void)setValue:(NSString *)value forField:(NSUInteger)field;
 - (NSString *)getValueForField:(NSUInteger)field;
 - (NSString *)stringForField:(NSUInteger)field;
