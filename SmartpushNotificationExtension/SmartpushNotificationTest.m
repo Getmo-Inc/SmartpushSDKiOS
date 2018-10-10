@@ -12,8 +12,8 @@
 
 @implementation SmartpushNotificationTest 
 
-+ (void) requestTestNotificationBy: (NotificationType) type completion:(void (^)(BOOL))completionBlock {
-    [SmartpushNotificationService requestTestNotification:type completion:completionBlock];
++ (void) requestTestNotificationBy: (NotificationType) type isProd:(BOOL) isProd completion:(void (^)(BOOL))completionBlock {
+    [SmartpushNotificationService requestTestNotification:type isProd: isProd completion:completionBlock];
 }
 
 @end

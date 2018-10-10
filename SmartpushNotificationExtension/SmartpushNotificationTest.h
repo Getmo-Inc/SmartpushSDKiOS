@@ -27,6 +27,6 @@ typedef NS_ENUM(NSUInteger, NotificationType) {
 
 @interface SmartpushNotificationTest : NSObject 
 
-+ (void) requestTestNotificationBy: (NotificationType) type completion:(void (^)(BOOL))completionBlock;
++ (void) requestTestNotificationBy: (NotificationType) type isProd:(BOOL) isProd completion:(void (^)(BOOL))completionBlock;
 
 @end
