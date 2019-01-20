@@ -65,6 +65,10 @@
     [[SmartpushSDKCore sharedInstance] setValue:value forKey:key];
 }
 
+- (NSString *)getStringForTag:(NSString *)key{
+    return [[SmartpushSDKCore sharedInstance] getStringForTag:key];
+}
+
 - (void)setString:(NSString *)value forTag:(NSString *)key {
     [[SmartpushSDKCore sharedInstance] setString:value forTag:key];
 }
