@@ -6,9 +6,9 @@
 //  Copyright © 2017 Smartpush. All rights reserved.
 //
 #import "SmartpushSDKCore/SmartpushSDKCore.h"
-
 #import "SmartpushSDK.h"
 #import "SmartpushDevice.h"
+#import "ExtraContentCore.h"
 
 @implementation SmartpushSDK
 
@@ -59,6 +59,19 @@
 }
 - (SmartpushUser *)getUserInfo {
     return [[SmartpushSDKCore sharedInstance] getUserInfo];
+}
+
+- (NotificationsCore*)getLastNotifications {
+    return [[SmartpushSDKCore sharedInstance] getLastNotifications];
+}
+
+- (ExtraContentCore*)getExtraContent{
+    return [[SmartpushSDKCore sharedInstance] getExtraContent];
+}
+
+
+- (NotificationsCore*)getUnreadNotifications {
+    return [[SmartpushSDKCore sharedInstance] getUnreadNotifications];
 }
 
 - (void)setValue:(NSString *)value forTag:(NSString *)key __deprecated_msg("use setString:foTag: instead.") {
@@ -137,6 +150,14 @@
     [[SmartpushSDKCore sharedInstance] blockUser:block];
 }
 
+- (void)requestLastNotifications {
+    [[SmartpushSDKCore sharedInstance] requestLastNotifications];
+}
+
+- (void)requestUnreadNotifications {
+    [[SmartpushSDKCore sharedInstance] requestUnreadNotifications];
+}
+
 - (void)requestCurretUserInformation {
     [[SmartpushSDKCore sharedInstance] requestCurretUserInformation];
 }
@@ -151,6 +172,18 @@
 
 - (void)checkHitQueue {
     [[SmartpushSDKCore sharedInstance] checkHitQueue];
+}
+
+- (void)markPushAsRead:(NSString *)pushId {
+    [[SmartpushSDKCore sharedInstance] markPushAsRead:pushId];
+}
+
+- (void)markAllAsRead {
+    [[SmartpushSDKCore sharedInstance] markAllAsRead];
+}
+
+- (void)requestExtraContentFor:(NSString *)pushId{
+    [[SmartpushSDKCore sharedInstance] requestExtraContentFor:pushId];
 }
 
 @end

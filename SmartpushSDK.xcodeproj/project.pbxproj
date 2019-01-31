@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA56BCD42200C96600EB21DA /* ExtraContentCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BA56BCD22200C96600EB21DA /* ExtraContentCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA56BCD52200C96600EB21DA /* ExtraContentCore.m in Sources */ = {isa = PBXBuildFile; fileRef = BA56BCD32200C96600EB21DA /* ExtraContentCore.m */; };
+		BA6662BC21F76A4E005D3D00 /* NotificationsCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BA6662BA21F76A4E005D3D00 /* NotificationsCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA6662BD21F76A4E005D3D00 /* NotificationsCore.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6662BB21F76A4E005D3D00 /* NotificationsCore.m */; };
 		FA4F058F1F5E4D7300167D09 /* SmartpushDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = FA4F05891F5E4D7300167D09 /* SmartpushDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA4F05901F5E4D7300167D09 /* SmartpushDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4F058A1F5E4D7300167D09 /* SmartpushDevice.m */; };
 		FA4F05911F5E4D7300167D09 /* SmartpushHit.h in Headers */ = {isa = PBXBuildFile; fileRef = FA4F058B1F5E4D7300167D09 /* SmartpushHit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA56BCD22200C96600EB21DA /* ExtraContentCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ExtraContentCore.h; path = SmartpushSDK/Model/ExtraContentCore.h; sourceTree = "<group>"; };
+		BA56BCD32200C96600EB21DA /* ExtraContentCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ExtraContentCore.m; path = SmartpushSDK/Model/ExtraContentCore.m; sourceTree = "<group>"; };
+		BA6662BA21F76A4E005D3D00 /* NotificationsCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationsCore.h; path = SmartpushSDK/Model/NotificationsCore.h; sourceTree = "<group>"; };
+		BA6662BB21F76A4E005D3D00 /* NotificationsCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationsCore.m; path = SmartpushSDK/Model/NotificationsCore.m; sourceTree = "<group>"; };
 		FA4F05891F5E4D7300167D09 /* SmartpushDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SmartpushDevice.h; path = SmartpushSDK/Model/SmartpushDevice.h; sourceTree = "<group>"; };
 		FA4F058A1F5E4D7300167D09 /* SmartpushDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SmartpushDevice.m; path = SmartpushSDK/Model/SmartpushDevice.m; sourceTree = "<group>"; };
 		FA4F058B1F5E4D7300167D09 /* SmartpushHit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SmartpushHit.h; path = SmartpushSDK/Model/SmartpushHit.h; sourceTree = "<group>"; };
@@ -113,6 +121,10 @@
 				FA4F058C1F5E4D7300167D09 /* SmartpushHit.m */,
 				FA4F058D1F5E4D7300167D09 /* SmartpushUser.h */,
 				FA4F058E1F5E4D7300167D09 /* SmartpushUser.m */,
+				BA6662BA21F76A4E005D3D00 /* NotificationsCore.h */,
+				BA6662BB21F76A4E005D3D00 /* NotificationsCore.m */,
+				BA56BCD22200C96600EB21DA /* ExtraContentCore.h */,
+				BA56BCD32200C96600EB21DA /* ExtraContentCore.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -178,8 +190,10 @@
 			files = (
 				FA8654061F5E3BA2007E8BE2 /* HitType.h in Headers */,
 				FA4F058F1F5E4D7300167D09 /* SmartpushDevice.h in Headers */,
+				BA56BCD42200C96600EB21DA /* ExtraContentCore.h in Headers */,
 				FA947F2F1F68C41A008DBEC4 /* SmartpushSDK.h in Headers */,
 				FA4F05931F5E4D7300167D09 /* SmartpushUser.h in Headers */,
+				BA6662BC21F76A4E005D3D00 /* NotificationsCore.h in Headers */,
 				FA4F05911F5E4D7300167D09 /* SmartpushHit.h in Headers */,
 				FA947F331F68C4C7008DBEC4 /* SmartpushNotificationTest.h in Headers */,
 				FA947F311F68C420008DBEC4 /* NotificationService.h in Headers */,
@@ -350,7 +364,9 @@
 				FA96B3141F5E359000BE668F /* SmartpushSDK.m in Sources */,
 				FA947F351F68C50E008DBEC4 /* SmartpushNotificationTest.m in Sources */,
 				FA4F05941F5E4D7300167D09 /* SmartpushUser.m in Sources */,
+				BA56BCD52200C96600EB21DA /* ExtraContentCore.m in Sources */,
 				FA4F05921F5E4D7300167D09 /* SmartpushHit.m in Sources */,
+				BA6662BD21F76A4E005D3D00 /* NotificationsCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
