@@ -11,6 +11,8 @@
 #import "SmartpushDevice.h"
 #import "SmartpushHit.h"
 #import "HitType.h"
+#import "NotificationsCore.h"
+#import "ExtraContentCore.h"
 
 @protocol SmartpushSDKDelegate <NSObject>
 
@@ -28,6 +30,9 @@
 extern NSString * const SmartpushSDKDeviceAddedNotification;
 extern NSString * const SmartpushSDKUserInfoObtainedNotification;
 extern NSString * const SmartpushSDKBlockUserNotification;
+extern NSString * const SmartpushSDKLastNotificationsObtainedNotification;
+extern NSString * const SmartpushSDKUnreadNotificationsObtainedNotification;
+extern NSString * const SmartpushSDKExtraContentObtainedNotification;
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -46,6 +51,9 @@ extern NSString * const SmartpushSDKBlockUserNotification;
 
 - (SmartpushDevice *)getDevice;
 - (SmartpushUser *)getUserInfo;
+- (NotificationsCore*)getLastNotifications;
+- (NotificationsCore*)getUnreadNotifications;
+- (ExtraContentCore*)getExtraContent;
 - (void)setValue:(NSString *)value forTag:(NSString *)key __deprecated_msg("use setString:foTag: instead.");
 
 - (NSString *)getStringForTag:(NSString *)key;
@@ -71,9 +79,14 @@ extern NSString * const SmartpushSDKBlockUserNotification;
 - (void)nearestZoneWithLatitude:(double)latitude andLongitude:(double)longitude;
 - (void)blockUser:(BOOL)block;
 - (void)requestCurretUserInformation;
+- (void)requestLastNotifications;
+- (void)requestUnreadNotifications;
 - (void)sendHit:(SmartpushHit *)smartpushHit;
 - (void)sendHit:(SmartpushHit *)smartpushHit WithAction:(HitType) action;
 - (void)checkHitQueue;
+- (void)markPushAsRead:(NSString *)pushId;
+- (void)markAllAsRead;
+- (void)requestExtraContentFor:(NSString *)pushId;
 
 @property (weak, nonatomic) UIResponder<SmartpushSDKDelegate> * delegate;
 
