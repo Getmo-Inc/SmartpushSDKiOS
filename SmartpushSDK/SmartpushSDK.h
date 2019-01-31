@@ -48,6 +48,8 @@ extern NSString * const SmartpushSDKBlockUserNotification;
 - (SmartpushUser *)getUserInfo;
 - (void)setValue:(NSString *)value forTag:(NSString *)key __deprecated_msg("use setString:foTag: instead.");
 
+- (NSString *)getStringForTag:(NSString *)key;
+
 - (void)setString:(NSString *)value forTag:(NSString *)key;
 - (void)setArray:(NSArray *)array forTag:(NSString *)key;
 - (void)setNumber:(NSNumber *)number forTag:(NSString *)key;
