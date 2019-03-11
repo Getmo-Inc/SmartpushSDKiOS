@@ -8,25 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, NotificationType) {
-    PushNormal = 0,
-    PushEmoji,
-    PushImage,
-    PushGif,
-    PushAudio,
-    PushVideo,
-    PushCarouselCoverflow,
-    PushCarouselRotary,
-    PushCarouselCylinder,
-    PushCarouselCylinderInverted,
-    PushCarouselLinear,
-    PushCarouselStack,
-    PushCarouselStackInverted
+typedef NS_ENUM(NSUInteger, NotificationTypeTest) {
+    PushNormalTest = 0,
+    PushEmojiTest,
+    PushImageTest,
+    PushGifTest,
+    PushAudioTest,
+    PushVideoTest,
+    PushCarouselCoverflowTest,
+    PushCarouselRotaryTest,
+    PushCarouselCylinderTest,
+    PushCarouselCylinderInvertedTest,
+    PushCarouselLinearTest,
+    PushCarouselStackTest,
+    PushCarouselStackInvertedTest
 };
 
 
 @interface SmartpushNotificationTest : NSObject 
 
-+ (void) requestTestNotificationBy: (NotificationType) type isProd:(BOOL) isProd completion:(void (^)(BOOL))completionBlock;
++ (void) requestTestNotificationBy: (NotificationTypeTest) type isProd:(BOOL) isProd completion:(void (^)(BOOL))completionBlock;
 
 @end

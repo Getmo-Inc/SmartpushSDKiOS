@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>3.0.0</string>
 	<key>CFBundleVersion</key>
-	<string>7</string>
+	<string>14</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -45,9 +45,13 @@
 			<array>
 				<string>AUDIO</string>
 				<string>CARROUSSEL</string>
+				<string>BANNER_LOCAL</string>
+				<string>GIF_LOCAL</string>
+				<string>AUDIO_LOCAL</string>
+				<string>VIDEO_LOCAL</string>
 			</array>
 			<key>UNNotificationExtensionInitialContentSizeRatio</key>
-			<real>0.10000000000000001</real>
+			<real>0.1</real>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.usernotifications.content-extension</string>
