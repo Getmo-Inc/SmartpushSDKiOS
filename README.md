@@ -42,9 +42,11 @@ Clique [aqui](https://developer.apple.com/library/content/documentation/Swift/Co
 - **SMARTPUSH_DevKey**
 - **SMARTPUSH_AppKey**
 - **SMARTPUSH_AppGroupKey**: Chave criada no **App Groups**
-- **SMARTPUSH_HitURL** (optional) - URL para receber hits de click e
-recebimento;  
 **Observação**: Caso não possua esses códigos envie um email para suporte@getmo.com.br
+
+- **SMARTPUSH_HitURL** (optional) - URL para receber hits de click e
+recebimento; 
+- **SMARTPUSH_UseUserLocation** (optional) - Atribuir valor "NO" somente para desabilitar o serviço de geolocalização;
 
 <br>
 
