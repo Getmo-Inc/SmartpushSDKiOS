@@ -270,3 +270,22 @@ SmartpushSDK.sharedInstance().nearestZone(withLatitude: 0.0, andLongitude: 0.0)
 Para remover a antiga SDK que utilizava o arquivo **.framework**, selecione **SmartpushSDK.framework** no seu projeto e **delete-o** movendo para a lixeira.
 
 <img src="https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/remove_old.png" width="400">
+
+<br>
+
+## <a name="remove_old_sdk"></a>Criando certificados
+Para gerar os certificados de produção e homologação e configurar o app no xcode é necessário seguir os passos:
+1. Habilitar o push no xcode.<br/>
+<img src="https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/certificados/push_xcode.png" width="400">
+
+2. Localizar o seu app ID e clicar em **Edit**.<br/>
+<img src="https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/certificados/appid_edit.png" width="400">
+
+3. Criar os certificados.<br/>
+<img src="https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/certificados/certificados.png" width="400">
+
+4. Download dos certificados.<br/>
+<img src="https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/certificados/download.png" width="400">
+
+5. Exportar o arquivo p12.<br/>
+<img src="https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/certificados/download.png" width="400">
