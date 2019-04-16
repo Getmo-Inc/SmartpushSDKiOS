@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-
+#import "SmartPushNotificationCore.h"
 #import "SmartpushHitCore.h"
 
 @protocol SmartpushSDKDelegateCore <NSObject>
@@ -54,6 +54,8 @@ extern NSString * const SmartpushSDKExtraContentObtainedNotification;
 - (id)getUnreadNotifications;
 - (id)getExtraContent;
 - (void)setValue:(NSString *)value forTag:(NSString *)key __deprecated_msg("use setString:foTag: instead.");
+
+- (NSString *)getStringForTag:(NSString *)key;
 
 - (void)setString:(NSString *)value forTag:(NSString *)key;
 - (void)setArray:(NSArray *)array forTag:(NSString *)key;

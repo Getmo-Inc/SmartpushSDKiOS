@@ -10,9 +10,11 @@
 #import "SmartpushUser.h"
 #import "SmartpushDevice.h"
 #import "SmartpushHit.h"
+#import "SmartpushNotification.h"
 #import "HitType.h"
 #import "NotificationsCore.h"
 #import "ExtraContentCore.h"
+#import "SmartpushNotificationBuilder.h"
 
 @protocol SmartpushSDKDelegate <NSObject>
 
