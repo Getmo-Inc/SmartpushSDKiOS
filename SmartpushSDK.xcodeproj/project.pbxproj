@@ -294,7 +294,6 @@
 				TargetAttributes = {
 					FAA0F2691F45533A00473E93 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7GGYTT3FER;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -304,7 +303,6 @@
 					};
 					FAC36C8F1F42784A00708DC1 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7GGYTT3FER;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -317,7 +315,6 @@
 					};
 					FAD96E2F1F3D550D004E828C = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7GGYTT3FER;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -327,6 +324,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -413,7 +411,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION_STR = 2.3.0;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -438,7 +436,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION_STR = 2.3.0;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -462,7 +460,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION_STR = 2.3.0;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -488,7 +486,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION_STR = 2.3.0;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -636,7 +634,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION_STR = 2.3.0;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -668,7 +666,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION_STR = 2.3.0;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7GGYTT3FER;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
