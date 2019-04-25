@@ -8,14 +8,14 @@
 <br>
 
 2. Abra a pasta **SmartpushSDKiOS** e arraste para dentro do seu projeto o arquivo **SmartpushSDK.xcodeproj**.
-![](https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/import_project.png)
+![](http://cdn.getmo.com.br/images/tutorial_ios/import_project.png)
 
 <br>
 
 3. Adicione os recursos da SDK no seu projeto através dos **Embedded Binaries**:
-<img src="https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/embedded.png" width="500">
+<img src="http://cdn.getmo.com.br/images/tutorial_ios/embedded.png" width="500">
 - Selecione os 3 itens:
-<img src="https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/libs_choose.png" width="500">
+<img src="http://cdn.getmo.com.br/images/tutorial_ios/libs_choose.png" width="500">
 
 <br>
 
@@ -24,12 +24,12 @@
 - Agora substitua apenas o **YOUR-BUNDLE-ID** pelo **Bundle Id** do seu app. Exemplo **com.MyApp.SmartpushNotificationExtension**.
 - Configure a assinatura do **App Extension** conforme o seu app.
 - Repita o procedimento para o target **SmartpushNotificationContent**.
-![](https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/extension.png)
+![](http://cdn.getmo.com.br/images/tutorial_ios/extension.png)
 
 <br>
 
 5. Outra coisa muito importante, é fazer a ligação do seu app com os **App Extensions** da SDK. Para isso vá até o menu de **Capablities** do seu app, habilite o **App Groups**, crie uma nova chave e deixa-a marcada. Repida o processo para o **SmartpushNotificationExtension** e para o **SmartpushNotificationContent**:
-![](https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/app_group.png)
+![](http://cdn.getmo.com.br/images/tutorial_ios/app_group.png)
 
 <br>
 
@@ -271,4 +271,49 @@ SmartpushSDK.sharedInstance().nearestZone(withLatitude: 0.0, andLongitude: 0.0)
 ## <a name="remove_old_sdk"></a>Removendo antiga SDK
 Para remover a antiga SDK que utilizava o arquivo **.framework**, selecione **SmartpushSDK.framework** no seu projeto e **delete-o** movendo para a lixeira.
 
-<img src="https://github.com/Getmo-Inc/SmartpushSDKiOS/blob/master/Tutorial/remove_old.png" width="400">
+<img src="http://cdn.getmo.com.br/images/tutorial_ios/remove_old.png" width="400">
+
+<br>
+
+## <a name="remove_old_sdk"></a>Criando certificados
+Para gerar os certificados de produção e homologação e configurar o app no xcode é necessário seguir os passos:
+1. Habilitar o push no xcode.<br/>
+<img src="http://cdn.getmo.com.br/images/docs_certificados/push_xcode.png" width="400">
+
+2. Localizar o seu app ID e clicar em **Edit**.<br/>
+<img src="http://cdn.getmo.com.br/images/docs_certificados/appid_edit.png" width="400">
+
+3. Criar os certificados.<br/>
+<img src="http://cdn.getmo.com.br/images/docs_certificados/certificados.png" width="400">
+
+4. Download dos certificados.<br/>
+<img src="http://cdn.getmo.com.br/images/docs_certificados/download.png" width="400">
+
+5. Exportar o arquivo p12.<br/>
+<img src="http://cdn.getmo.com.br/images/docs_certificados/exportar_p12.png" width="400">
+
+
+### Last Notifications
+```
+    //Add observer get last notifications
+    NotificationCenter.default.addObserver(self, selector: #selector(self.refreshData), name: NSNotification.Name.SmartpushSDKLastNotificationsObtained, object: nil)
+
+    SmartpushSDK.sharedInstance().requestLastNotifications()
+
+    let data = SmartpushSDK.sharedInstance().getLastNotifications()?.dataResponse!
+``` 
+
+### Mark as read
+```
+    SmartpushSDK.sharedInstance()?.markPush(asRead: obj.pushid)
+``` 
+
+### Mark all as read
+```
+    SmartpushSDK.sharedInstance()?.markAllAsRead()
+``` 
+
+### Extra content
+```
+    SmartpushSDK.sharedInstance()?.requestExtraContent(for: obj.pushid)
+``` 
