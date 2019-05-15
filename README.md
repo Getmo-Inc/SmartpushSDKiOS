@@ -275,24 +275,6 @@ Para remover a antiga SDK que utilizava o arquivo **.framework**, selecione **Sm
 
 <br>
 
-## <a name="remove_old_sdk"></a>Criando certificados
-Para gerar os certificados de produção e homologação e configurar o app no xcode é necessário seguir os passos:
-1. Habilitar o push no xcode.<br/>
-<img src="http://cdn.getmo.com.br/images/docs_certificados/push_xcode.png" width="400">
-
-2. Localizar o seu app ID e clicar em **Edit**.<br/>
-<img src="http://cdn.getmo.com.br/images/docs_certificados/appid_edit.png" width="400">
-
-3. Criar os certificados.<br/>
-<img src="http://cdn.getmo.com.br/images/docs_certificados/certificados.png" width="400">
-
-4. Download dos certificados.<br/>
-<img src="http://cdn.getmo.com.br/images/docs_certificados/download.png" width="400">
-
-5. Exportar o arquivo p12.<br/>
-<img src="http://cdn.getmo.com.br/images/docs_certificados/exportar_p12.png" width="400">
-
-
 ### Last Notifications
 ```
     //Add observer get last notifications
@@ -317,3 +299,60 @@ Para gerar os certificados de produção e homologação e configurar o app no x
 ```
     SmartpushSDK.sharedInstance()?.requestExtraContent(for: obj.pushid)
 ``` 
+
+# O que são Push Notifications? #
+
+O serviço Apple Push Notification (APNs) é a peça central do recurso de notificações remotas. É um serviço robusto, seguro e altamente eficiente para os desenvolvedores de aplicativos propagarem informações para dispositivos iOS.
+
+# O que as Push Notifications podem fazer? #
+
+* Exibir uma mensagem
+* Tocar um som
+* Fornecer ações com as quais o usuário pode agir com ou sem abrir o aplicativo
+* Mostrar uma imagem ou outro tipo de mídia, até mesmo vídeos.
+* Solicitar ao aplicativo para realizar alguma ação em segundo plano
+
+# Itens necessários antes de começar a configurar #
+
+Um dispositivo ios de verdade, infelizmente as push notifications não funcionam no simulador.
+
+Programa de desenvolvedores da Apple, é necessário ter uma conta de desenvolvedor.
+
+Uma forma de enviar o payload do push para o dispositivo, recomendamos a api da Smartpush:
+https://admin.getmo.com.br/
+
+# Configuração do APNS e implementação inicial passo a passo #
+
+Passo 1: É necessário criar um projeto.
+
+Passo 2: Habilitar o push em Capabilities, setar para ON.
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/enable_push.png)
+
+Passo 3: Obtenha o certificado de APNs: acesse sua conta do Apple Dev Member Center e faça o login. Clique em Certificados, IDs e perfis -> Identificadores -> IDs de aplicativo onde você deve ver todos os identificadores do aplicativo, selecione aquele para o qual você está criando notificações . Você verá uma grande lista de serviços de aplicativos disponíveis - as notificações por push devem ser marcadas como configuráveis:
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/config_push.png)
+
+Deve haver um botão Editar na parte inferior, clique nele e encontre as notificações por push nessa lista novamente.
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/enable_push_step4.png)
+
+O que você precisa é o Certificado SSL de Desenvolvimento (esclarecimento sobre certificados de desenvolvimento vs. produções fornecidos no final do artigo), clique no Botão Criar Certificado e siga as instruções para criar um Arquivo CSR. Resumindo, mantenha o CMD + Space para iniciar o spotlight no seu Mac, escreva Keychain Access e pressione enter para iniciar o App de Acesso às Chaves:
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/spotlight_access.png)
+
+Próximo passo por instruções da Apple:
+
+No menu superior em Keychain Access, selecione Keychain Access> Certificate Assistant> Solicitar um certificado de uma autoridade de certificação.
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/keychain.png)
+
+Preencha corretamente as Informações do certificado e salve o arquivo .certSigningRequest em um local fácil de encontrar, porque será necessário enviá-lo aqui:
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/generate_certificate.png)
+
+Após o upload, você verá essa tela:
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/download_cert.png)
+
+Faça o download do certificado gerado, clique duas vezes no arquivo .cer e encontre-o instalado no seu Keychain Access:
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/cert_keychain.png)
+
+Este passo foi longo, mas vale a pena. Siga estas etapas novamente Certificados, IDs e perfis -> Identificadores -> IDs de aplicativos e você verá que as notificações push estão ativadas para desenvolvimento:
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/show_enabled.png)
+
+Pronto, a partir de agora é no xcode.
+
