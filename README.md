@@ -1,4 +1,28 @@
 # SmartpushSDK iOS
+
+# O que são Push Notifications? #
+
+O serviço Apple Push Notification (APNs) é a peça central do recurso de notificações remotas. É um serviço robusto, seguro e altamente eficiente para os desenvolvedores de aplicativos propagarem informações para dispositivos iOS.
+
+# O que as Push Notifications podem fazer? #
+
+* Exibir uma mensagem
+* Tocar um som
+* Fornecer ações com as quais o usuário pode agir com ou sem abrir o aplicativo
+* Mostrar uma imagem ou outro tipo de mídia, até mesmo vídeos.
+* Solicitar ao aplicativo para realizar alguma ação em segundo plano
+
+# Itens necessários antes de começar a configurar #
+
+Um dispositivo ios de verdade, infelizmente as push notifications não funcionam no simulador.
+
+Programa de desenvolvedores da Apple, é necessário ter uma conta de desenvolvedor.
+
+Uma forma de enviar o payload do push para o dispositivo, recomendamos a api da Smartpush:
+https://admin.getmo.com.br/
+
+Antes de começar é necessário criar os [certificados](#configurar_apns)
+
 ## Instalação
 **Obs:** Caso seu projeto já utilize SDK através do **.framework**, é necessário [remover-lo](#remove_old_sdk) antes de continuar.
 1. Adicione este projeto como Submodulo de seu projeto Git, ou faça [Download](https://github.com/Getmo-Inc/SmartpushSDKiOS/archive/master.zip).
@@ -50,6 +74,8 @@ recebimento;
 
 <br>
 
+Se você ainda não criou os certificados [clique aqui](#configurar_apns)
+
 8. No arquivo **UIApplicationDelegate** implemente o delegate **SmartpushSDKDelegate**.
 
 <br>
@@ -70,7 +96,7 @@ recebimento;
 }
 ```
 
-#### Swift 4
+#### Swift
 ```
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -95,7 +121,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-#### Swift 4
+#### Swift
 ```
 func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error:Error) {
     SmartpushSDK.sharedInstance().didFailToRegisterForRemoteNotificationsWithError(error)
@@ -113,7 +139,7 @@ func application(_ application: UIApplication, didFailToRegisterForRemoteNotific
 }
 ```
 
-#### Swift 4
+#### Swift
 ```
 func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
     SmartpushSDK.sharedInstance().didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
@@ -131,7 +157,7 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 }
 ```
 
-#### Swift 4
+#### Swift
 ```
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
     SmartpushSDK.sharedInstance().didReceiveRemoteNotification(userInfo)
@@ -171,7 +197,7 @@ func application(_ application: UIApplication, didRegister notificationSettings:
 }
 ```
 
-#### Swift 4
+#### Swift
 ```
 func onPushAccepted(_ push: [AnyHashable: Any]!, andOpenFromPush openFromPush: Bool) {
     print("Push: \(push)")
@@ -195,7 +221,7 @@ func onPushAccepted(_ push: [AnyHashable : Any]!, andOpenFromPush openFromPush: 
 }
 ```
 
-#### Swift 4
+#### Swift
 ```
 @available(iOS 10.0, *)
 func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
@@ -220,7 +246,7 @@ Para definir uma TAG de **String**, ou remove-la utilize o método abaixo:
 [[SmartpushSDK sharedInstance]delStringTag:@"key"];
 ```
 
-#### Swift 4
+#### Swift
 ```
 SmartpushSDK.sharedInstance().setString("value", forTag: "key")
 SmartpushSDK.sharedInstance().delStringTag(key)
@@ -242,7 +268,7 @@ A SDK provê mecanismos para que os usuários possam cancelar/ativar o recebimen
 [[SmartpushSDK sharedInstance]blockUser:true];
 ```
 
-#### Swift 4
+#### Swift
 ```
 SmartpushSDK.sharedInstance().blockUser(true)
 ```  
@@ -261,7 +287,7 @@ Para monitorar e permitir o envio de mensagens push quando seus usuários ingres
 [[SmartpushSDK sharedInstance]nearestZoneWithLatitude:0.0 andLongitude:0.0];
 ```
 
-#### Swift 4
+#### Swift
 ```
 SmartpushSDK.sharedInstance().nearestZone(withLatitude: 0.0, andLongitude: 0.0)
 ```  
@@ -300,28 +326,7 @@ Para remover a antiga SDK que utilizava o arquivo **.framework**, selecione **Sm
     SmartpushSDK.sharedInstance()?.requestExtraContent(for: obj.pushid)
 ``` 
 
-# O que são Push Notifications? #
-
-O serviço Apple Push Notification (APNs) é a peça central do recurso de notificações remotas. É um serviço robusto, seguro e altamente eficiente para os desenvolvedores de aplicativos propagarem informações para dispositivos iOS.
-
-# O que as Push Notifications podem fazer? #
-
-* Exibir uma mensagem
-* Tocar um som
-* Fornecer ações com as quais o usuário pode agir com ou sem abrir o aplicativo
-* Mostrar uma imagem ou outro tipo de mídia, até mesmo vídeos.
-* Solicitar ao aplicativo para realizar alguma ação em segundo plano
-
-# Itens necessários antes de começar a configurar #
-
-Um dispositivo ios de verdade, infelizmente as push notifications não funcionam no simulador.
-
-Programa de desenvolvedores da Apple, é necessário ter uma conta de desenvolvedor.
-
-Uma forma de enviar o payload do push para o dispositivo, recomendamos a api da Smartpush:
-https://admin.getmo.com.br/
-
-# Configuração do APNS e implementação inicial passo a passo #
+## <a name="configurar_apns"></a> Configuração do APNS e implementação inicial passo a passo 
 
 Passo 1: É necessário criar um projeto.
 
@@ -351,8 +356,11 @@ Após o upload, você verá essa tela:
 Faça o download do certificado gerado, clique duas vezes no arquivo .cer e encontre-o instalado no seu Keychain Access:
 ![picture](http://cdn.getmo.com.br/images/tutorial_ios/cert_keychain.png)
 
-Este passo foi longo, mas vale a pena. Siga estas etapas novamente Certificados, IDs e perfis -> Identificadores -> IDs de aplicativos e você verá que as notificações push estão ativadas para desenvolvimento:
+Este processo foi longo, mas vale a pena. Siga estas etapas novamente Certificados, IDs e perfis -> Identificadores -> IDs de aplicativos e você verá que as notificações push estão ativadas para desenvolvimento:
 ![picture](http://cdn.getmo.com.br/images/tutorial_ios/show_enabled.png)
+
+O último passo é adicionar os certificados no portal:
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/certificados_portal.png)
 
 Pronto, a partir de agora é no xcode.
 
