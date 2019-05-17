@@ -14,15 +14,47 @@ O serviço Apple Push Notification (APNs) é a peça central do recurso de notif
 
 # Itens necessários antes de começar a configurar #
 
-Um dispositivo ios de verdade, infelizmente as push notifications não funcionam no simulador.
-
-Programa de desenvolvedores da Apple, é necessário ter uma conta de desenvolvedor.
-
-Uma forma de enviar o payload do push para o dispositivo, recomendamos a api da Smartpush:
+* Um dispositivo ios de verdade, infelizmente as push notifications não funcionam no simulador.
+* Programa de desenvolvedores da Apple, é necessário ter uma conta de desenvolvedor.
+* Uma forma de enviar o payload do push para o dispositivo, recomendamos a api da Smartpush:
 https://admin.getmo.com.br/
 
-Antes de começar é necessário criar os [certificados](#configurar_apns)
+## <a name="configurar_apns"></a> Configuração do APNS e implementação inicial passo a passo 
 
+Passo 1: É necessário criar um projeto.
+
+Passo 2: Habilitar o push em Capabilities, setar para ON.
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/enable_push.png)
+
+Passo 3: Obtenha o certificado de APNs: acesse sua conta do Apple Dev Member Center e faça o login. Clique em Certificados, IDs e perfis -> Identificadores -> IDs de aplicativo onde você deve ver todos os identificadores do aplicativo, selecione aquele para o qual você está criando notificações . Você verá uma grande lista de serviços de aplicativos disponíveis - as notificações por push devem ser marcadas como configuráveis:
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/config_push.png)
+
+Deve haver um botão Editar na parte inferior, clique nele e encontre as notificações por push nessa lista novamente.
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/enable_push_step4.png)
+
+O que você precisa é o Certificado SSL de Desenvolvimento (esclarecimento sobre certificados de desenvolvimento vs. produções fornecidos no final do artigo), clique no Botão Criar Certificado e siga as instruções para criar um Arquivo CSR. Resumindo, mantenha o CMD + Space para iniciar o spotlight no seu Mac, escreva Keychain Access e pressione enter para iniciar o App de Acesso às Chaves:
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/spotlight_access.png)
+
+Próximo passo por instruções da Apple:
+
+No menu superior em Keychain Access, selecione Keychain Access> Certificate Assistant> Solicitar um certificado de uma autoridade de certificação.
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/keychain.png)
+
+Preencha corretamente as Informações do certificado e salve o arquivo .certSigningRequest em um local fácil de encontrar, porque será necessário enviá-lo aqui:
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/generate_certificate.png)
+
+Após o upload, você verá essa tela:
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/download_cert.png)
+
+Faça o download do certificado gerado, clique duas vezes no arquivo .cer e encontre-o instalado no seu Keychain Access:
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/cert_keychain.png)
+
+Neste momento eu peço para que guarde o certificado pois precisaremos dele mais tarde para adicionar no portal da SmartPush
+
+Este processo foi longo, mas vale a pena. Siga estas etapas novamente Certificados, IDs e perfis -> Identificadores -> IDs de aplicativos e você verá que as notificações push estão ativadas para desenvolvimento:
+![picture](http://cdn.getmo.com.br/images/tutorial_ios/show_enabled.png)
+
+Agora vamos fazer a instalação da sdk no xcode:
 ## Instalação
 **Obs:** Caso seu projeto já utilize SDK através do **.framework**, é necessário [remover-lo](#remove_old_sdk) antes de continuar.
 1. Adicione este projeto como Submodulo de seu projeto Git, ou faça [Download](https://github.com/Getmo-Inc/SmartpushSDKiOS/archive/master.zip).
@@ -30,6 +62,8 @@ Antes de começar é necessário criar os [certificados](#configurar_apns)
     $ git submodule add https://github.com/Getmo-Inc/SmartpushSDKiOS.git
 ```
 <br>
+
+Se você já tem o projeto acidionado como submodulo do git e precisa fazer update, acesse [aqui](#atualizar_sdk).
 
 2. Abra a pasta **SmartpushSDKiOS** e arraste para dentro do seu projeto o arquivo **SmartpushSDK.xcodeproj**.
 ![](http://cdn.getmo.com.br/images/tutorial_ios/import_project.png)
@@ -175,7 +209,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 }
 ```
 
-#### Swift 4
+#### Swift
 ```
 func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
     SmartpushSDK.sharedInstance().didRegister(notificationSettings)
@@ -209,8 +243,6 @@ func onPushAccepted(_ push: [AnyHashable : Any]!, andOpenFromPush openFromPush: 
 ```
 
 <br>
-
-### Melhorias para o iOS 10+
 
 15. Para que seu aplicativo receba as notificações pela central do iOS enquanto estiver em primeiro plano, importe **UserNotifications** e adicione o código no corpo do método **UIApplicationDelegate** no arquivo **UIApplicationDelegate**.
 
@@ -292,16 +324,11 @@ Para monitorar e permitir o envio de mensagens push quando seus usuários ingres
 SmartpushSDK.sharedInstance().nearestZone(withLatitude: 0.0, andLongitude: 0.0)
 ```  
 
-<br>
-
-## <a name="remove_old_sdk"></a>Removendo antiga SDK
-Para remover a antiga SDK que utilizava o arquivo **.framework**, selecione **SmartpushSDK.framework** no seu projeto e **delete-o** movendo para a lixeira.
-
-<img src="http://cdn.getmo.com.br/images/tutorial_ios/remove_old.png" width="400">
-
-<br>
+### Inbox - Acesso as últimas notificações
 
 ### Last Notifications
+A SDK provê mecanismos para que os usuários possam acessar as últimas notificações através dos métodos abaixo:
+O conteúdo do retorno é um objeto do tipo NSData.
 ```
     //Add observer get last notifications
     NotificationCenter.default.addObserver(self, selector: #selector(self.refreshData), name: NSNotification.Name.SmartpushSDKLastNotificationsObtained, object: nil)
@@ -312,55 +339,61 @@ Para remover a antiga SDK que utilizava o arquivo **.framework**, selecione **Sm
 ``` 
 
 ### Mark as read
+A SDK provê a funcionalidade de marcar uma notificação como lida. O parâmetro necessário é o id do push.
+
 ```
     SmartpushSDK.sharedInstance()?.markPush(asRead: obj.pushid)
 ``` 
 
 ### Mark all as read
+A SDK provê a funcionalidade de marcar todas as notificações como lidas.
+
 ```
     SmartpushSDK.sharedInstance()?.markAllAsRead()
 ``` 
 
 ### Extra content
+A SDK provê a funcionalidade acessar o conteúdo extra de uma notificação. Este é um conteúdo livre customizável pelo cliente.
 ```
     SmartpushSDK.sharedInstance()?.requestExtraContent(for: obj.pushid)
 ``` 
-
-## <a name="configurar_apns"></a> Configuração do APNS e implementação inicial passo a passo 
-
-Passo 1: É necessário criar um projeto.
-
-Passo 2: Habilitar o push em Capabilities, setar para ON.
-![picture](http://cdn.getmo.com.br/images/tutorial_ios/enable_push.png)
-
-Passo 3: Obtenha o certificado de APNs: acesse sua conta do Apple Dev Member Center e faça o login. Clique em Certificados, IDs e perfis -> Identificadores -> IDs de aplicativo onde você deve ver todos os identificadores do aplicativo, selecione aquele para o qual você está criando notificações . Você verá uma grande lista de serviços de aplicativos disponíveis - as notificações por push devem ser marcadas como configuráveis:
-![picture](http://cdn.getmo.com.br/images/tutorial_ios/config_push.png)
-
-Deve haver um botão Editar na parte inferior, clique nele e encontre as notificações por push nessa lista novamente.
-![picture](http://cdn.getmo.com.br/images/tutorial_ios/enable_push_step4.png)
-
-O que você precisa é o Certificado SSL de Desenvolvimento (esclarecimento sobre certificados de desenvolvimento vs. produções fornecidos no final do artigo), clique no Botão Criar Certificado e siga as instruções para criar um Arquivo CSR. Resumindo, mantenha o CMD + Space para iniciar o spotlight no seu Mac, escreva Keychain Access e pressione enter para iniciar o App de Acesso às Chaves:
-![picture](http://cdn.getmo.com.br/images/tutorial_ios/spotlight_access.png)
-
-Próximo passo por instruções da Apple:
-
-No menu superior em Keychain Access, selecione Keychain Access> Certificate Assistant> Solicitar um certificado de uma autoridade de certificação.
-![picture](http://cdn.getmo.com.br/images/tutorial_ios/keychain.png)
-
-Preencha corretamente as Informações do certificado e salve o arquivo .certSigningRequest em um local fácil de encontrar, porque será necessário enviá-lo aqui:
-![picture](http://cdn.getmo.com.br/images/tutorial_ios/generate_certificate.png)
-
-Após o upload, você verá essa tela:
-![picture](http://cdn.getmo.com.br/images/tutorial_ios/download_cert.png)
-
-Faça o download do certificado gerado, clique duas vezes no arquivo .cer e encontre-o instalado no seu Keychain Access:
-![picture](http://cdn.getmo.com.br/images/tutorial_ios/cert_keychain.png)
-
-Este processo foi longo, mas vale a pena. Siga estas etapas novamente Certificados, IDs e perfis -> Identificadores -> IDs de aplicativos e você verá que as notificações push estão ativadas para desenvolvimento:
-![picture](http://cdn.getmo.com.br/images/tutorial_ios/show_enabled.png)
 
 O último passo é adicionar os certificados no portal:
 ![picture](http://cdn.getmo.com.br/images/tutorial_ios/certificados_portal.png)
 
 Pronto, a partir de agora é no xcode.
+
+<br>
+
+## <a name="remove_old_sdk"></a>Removendo antiga SDK
+Para remover a antiga SDK que utilizava o arquivo **.framework**, selecione **SmartpushSDK.framework** no seu projeto e **delete-o** movendo para a lixeira.
+
+<img src="http://cdn.getmo.com.br/images/tutorial_ios/remove_old.png" width="400">
+
+<br>
+
+## <a name="atualizar_sdk"></a> Atualizar instalação da SDK 
+Para atualizar a SDK é necessário fazer o procedimento a seguir:
+
+Execute os comandos
+```
+    git submodule init
+```
+seguido por:
+```
+    git submodule update
+```
+
+e então vá para o diretório SmartpushSDKiOS
+```
+    cd SmartpushSDKiOS
+```
+
+e execute o comando
+```
+    git pull
+```
+
+pronto, a SDK está atualizada e agora é só compilar.
+ 
 
