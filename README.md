@@ -6,11 +6,11 @@ O serviço Apple Push Notification (APNs) é a peça central do recurso de notif
 
 # O que as Push Notifications podem fazer? #
 
-* Exibir uma mensagem
-* Tocar um som
-* Fornecer ações com as quais o usuário pode agir com ou sem abrir o aplicativo
+* Exibir uma mensagem.
+* Tocar um som.
+* Fornecer ações com as quais o usuário pode agir com ou sem abrir o aplicativo.
 * Mostrar uma imagem ou outro tipo de mídia, até mesmo vídeos.
-* Solicitar ao aplicativo para realizar alguma ação em segundo plano
+* Solicitar ao aplicativo para realizar alguma ação em segundo plano.
 
 # Itens necessários antes de começar a configurar #
 
@@ -32,10 +32,10 @@ Passo 3: Obtenha o certificado de APNs: acesse sua conta do Apple Dev Member Cen
 Deve haver um botão Editar na parte inferior, clique nele e encontre as notificações por push nessa lista novamente.
 ![picture](http://cdn.getmo.com.br/images/tutorial_ios/enable_push_step4.png)
 
-O que você precisa é o Certificado SSL de Desenvolvimento (esclarecimento sobre certificados de desenvolvimento vs. produções fornecidos no final do artigo), clique no Botão Criar Certificado e siga as instruções para criar um Arquivo CSR. Resumindo, mantenha o CMD + Space para iniciar o spotlight no seu Mac, escreva Keychain Access e pressione enter para iniciar o App de Acesso às Chaves:
+O que você precisa é o Certificado SSL de Desenvolvimento, clique no Botão Criar Certificado e siga as instruções para criar um Arquivo CSR. Mantenha o CMD + Space para iniciar o spotlight no seu Mac, escreva Keychain Access e pressione enter para iniciar o App de Acesso às Chaves:
 ![picture](http://cdn.getmo.com.br/images/tutorial_ios/spotlight_access.png)
 
-Próximo passo por instruções da Apple:
+Passo 4, por instruções da Apple:
 
 No menu superior em Keychain Access, selecione Keychain Access> Certificate Assistant> Solicitar um certificado de uma autoridade de certificação.
 ![picture](http://cdn.getmo.com.br/images/tutorial_ios/keychain.png)
