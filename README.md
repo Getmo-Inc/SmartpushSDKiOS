@@ -14,9 +14,9 @@ O serviço Apple Push Notification (APNs) é a peça central do recurso de notif
 
 # Itens necessários antes de começar a configurar #
 
-* Um dispositivo ios de verdade, infelizmente as push notifications não funcionam no simulador.
+* Um dispositivo iOS de verdade, infelizmente as push notifications não funcionam no simulador.
 * Programa de desenvolvedores da Apple, é necessário ter uma conta de desenvolvedor.
-* É necessário criar uma conta no portal https://admin.getmo.com.br/, é atrávez da plataforma da getmo que os push chegarão aos dispositivos.
+* É necessário criar uma conta no portal https://admin.getmo.com.br, é atrávez da plataforma que os push chegarão aos dispositivos.
 
 ## <a name="configurar_apns"></a> Configuração do APNS e implementação inicial passo a passo 
 
