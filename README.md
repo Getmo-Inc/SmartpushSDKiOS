@@ -48,7 +48,7 @@ Após o upload, você verá essa tela:
 Faça o download do certificado gerado, clique duas vezes no arquivo .cer e encontre-o instalado no seu Keychain Access:
 ![picture](http://cdn.getmo.com.br/images/tutorial_ios/cert_keychain.png)
 
-Neste momento eu peço para que guarde o certificado pois precisaremos dele mais tarde para adicionar no portal da SmartPush
+Neste momento, peço para que guarde o certificado pois precisaremos dele mais tarde para adicionar no portal da SmartPush.
 
 Este processo foi longo, mas vale a pena. Siga estas etapas novamente Certificados, IDs e perfis -> Identificadores -> IDs de aplicativos e você verá que as notificações push estão ativadas para desenvolvimento:
 ![picture](http://cdn.getmo.com.br/images/tutorial_ios/show_enabled.png)
@@ -87,10 +87,10 @@ Se você já tem o projeto acidionado como submodulo do git e precisa fazer upda
 
 5. Para fazer a ligação do app com as extensions **App Extensions** da SDK é necessário criar um grupo. 
 
-Para criar um grupo, acesse o menu **Capablities** e clique no botão "+":
+Para criar um grupo, acesse o menu **Capabilities** e clique no botão "+":
 ![](http://cdn.getmo.com.br/images/tutorial_ios/appgroup_plus_button.png)
 
-Então digite um nome para o grupo, esse será o valor da tag **SMARTPUSH_AppGroupKey** posteriormente.
+Então digite um nome para o grupo, esse será o valor da tag **SMARTPUSH_AppGroupKey**, veremos isso em seguida.
 ![](http://cdn.getmo.com.br/images/tutorial_ios/appid_screen.png)
 
 Deixe o grupo marcado e repita o processo para o **SmartpushNotificationExtension** e para o **SmartpushNotificationContent**:
