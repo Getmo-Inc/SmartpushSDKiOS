@@ -85,14 +85,16 @@ Se você já tem o projeto acidionado como submodulo do git e precisa fazer upda
 
 <br>
 
-5. Outra coisa muito importante, é fazer a ligação do seu app com os **App Extensions** da SDK. Para isso vá até o menu de **Capablities** do seu app, habilite o **App Groups**, crie uma nova chave e deixa-a marcada. Repita o processo para o **SmartpushNotificationExtension** e para o **SmartpushNotificationContent**:
-![](http://cdn.getmo.com.br/images/tutorial_ios/app_group.png)
+5. Para fazer a ligação do app com as extensions **App Extensions** da SDK é necessário criar um grupo. 
 
 Para criar um grupo, acesse o menu **Capablities** e clique no botão "+":
 ![](http://cdn.getmo.com.br/images/tutorial_ios/appgroup_plus_button.png)
 
-Então digite um nome para o grupo, esse será o valor da tag **SMARTPUSH_AppGroupKe**
-![](http://cdn.getmo.com.br/images/tutorial_ios/appgroup_screen.png)
+Então digite um nome para o grupo, esse será o valor da tag **SMARTPUSH_AppGroupKey** posteriormente.
+![](http://cdn.getmo.com.br/images/tutorial_ios/appid_screen.png)
+
+Deixe o grupo marcado e repita o processo para o **SmartpushNotificationExtension** e para o **SmartpushNotificationContent**:
+![](http://cdn.getmo.com.br/images/tutorial_ios/app_group.png)
 
 <br>
 
