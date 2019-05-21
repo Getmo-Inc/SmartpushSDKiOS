@@ -91,9 +91,11 @@ Para criar um grupo, acesse o menu **Capabilities** e clique no botão "+":
 <img src="http://cdn.getmo.com.br/images/tutorial_ios/appgroup_plus_button.png" width="500">
 
 Então digite um nome para o grupo, esse será o valor da tag **SMARTPUSH_AppGroupKey**, veremos isso em seguida.
+
 <img src="http://cdn.getmo.com.br/images/tutorial_ios/appgroup_create.png" width="500">
 
 Deixe o grupo marcado e repita o processo para o **SmartpushNotificationExtension** e para o **SmartpushNotificationContent**:
+
 <img src="http://cdn.getmo.com.br/images/tutorial_ios/app_group.png" width="500">
 
 <br>
