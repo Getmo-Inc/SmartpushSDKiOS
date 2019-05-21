@@ -88,7 +88,7 @@ Se você já tem o projeto acidionado como submodulo do git e precisa fazer upda
 5. Para fazer a ligação do app com as extensions **App Extensions** da SDK é necessário criar um grupo. 
 
 Para criar um grupo, acesse o menu **Capabilities** e clique no botão "+":
-![](http://cdn.getmo.com.br/images/tutorial_ios/appgroup_plus_button.png)
+<img src="http://cdn.getmo.com.br/images/tutorial_ios/appgroup_plus_button.png" width="500">
 
 Então digite um nome para o grupo, esse será o valor da tag **SMARTPUSH_AppGroupKey**, veremos isso em seguida.
 ![](http://cdn.getmo.com.br/images/tutorial_ios/appgroup_create.png)
