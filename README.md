@@ -16,7 +16,7 @@ O serviço Apple Push Notification (APNs) é a peça central do recurso de notif
 
 * Um dispositivo iOS de verdade, infelizmente as push notifications não funcionam no simulador.
 * Programa de desenvolvedores da Apple, é necessário ter uma conta de desenvolvedor.
-* É necessário criar uma conta no portal https://admin.getmo.com.br, é atrávez da plataforma que os push chegarão aos dispositivos.
+* É necessário criar uma conta no portal https://admin.getmo.com.br, é atrávez do portal que os push chegarão aos dispositivos.
 
 ## <a name="configurar_apns"></a> Configuração do APNS e implementação inicial passo a passo 
 
@@ -88,6 +88,12 @@ Se você já tem o projeto acidionado como submodulo do git e precisa fazer upda
 5. Outra coisa muito importante, é fazer a ligação do seu app com os **App Extensions** da SDK. Para isso vá até o menu de **Capablities** do seu app, habilite o **App Groups**, crie uma nova chave e deixa-a marcada. Repita o processo para o **SmartpushNotificationExtension** e para o **SmartpushNotificationContent**:
 ![](http://cdn.getmo.com.br/images/tutorial_ios/app_group.png)
 
+Para criar um grupo, acesse o menu **Capablities** e clique no botão "+":
+![](http://cdn.getmo.com.br/images/tutorial_ios/appgroup_plus_button.png)
+
+Então digite um nome para o grupo, esse será o valor da tag **SMARTPUSH_AppGroupKe**
+![](http://cdn.getmo.com.br/images/tutorial_ios/appgroup_screen.png)
+
 <br>
 
 6. Caso sua aplicação seja em Swift, utilize um **Bridging-Header** para realizar a integração com o framework.
@@ -99,10 +105,10 @@ Clique [aqui](https://developer.apple.com/library/content/documentation/Swift/Co
 - **SMARTPUSH_DevKey**
 - **SMARTPUSH_AppKey**
 
-Esses valores são encontrados no portal 
+O app key é encontrado no portal, acessando o menu "Apps".
+![](http://cdn.getmo.com.br/images/tutorial_ios/appid_screen.png)
 
 - **SMARTPUSH_AppGroupKey**: Chave criada no **App Groups**
-**Observação**: Caso não possua esses códigos envie um email para suporte@getmo.com.br
 
 - **SMARTPUSH_HitURL** (optional) - URL para receber hits de click e
 recebimento; 
