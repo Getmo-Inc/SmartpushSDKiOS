@@ -4,7 +4,7 @@
 //
 //  Created by Rodrigo Busata on 10/08/17.
 //  Copyright © 2017 Smartpush. All rights reserved.
-//  Version 2.2.2
+//  Version 2.2.3
 
 #import <UIKit/UIKit.h>
 #import "SmartpushUser.h"
