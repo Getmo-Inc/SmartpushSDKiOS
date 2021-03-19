@@ -1,0 +1,6 @@
+framework module SmartpushSDKCore {
+  umbrella header "SmartpushSDKCore.h"
+
+  export *
+  module * { export * }
+}
