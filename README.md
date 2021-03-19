@@ -79,6 +79,7 @@ Se você já tem o projeto acidionado como submodulo do git e precisa fazer upda
 4. Agora precisamos configurar o **Bundle Id** e a **assinatura** do seu app nos **App Extensions** da SDK:
 - Selecione o arquivo **SmartpushSDK.xcodeproj** e depois o target **SmartpushNotificationExtension**.
 - Agora substitua apenas o **YOUR-BUNDLE-ID** pelo **Bundle Id** do seu app. Exemplo **com.MyApp.SmartpushNotificationExtension**.
+- Então substitua o **YOUR-VERSION** e **YOUR-BUILD** pela versão e build do seu app
 - Configure a assinatura do **App Extension** conforme o seu app.
 - Repita o procedimento para o target **SmartpushNotificationContent**.
 ![](http://cdn.getmo.com.br/images/tutorial_ios/extension.png)
