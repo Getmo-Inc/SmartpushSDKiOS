@@ -110,6 +110,7 @@ Se você ainda não criou os certificados [clique aqui](#configurar_apns)
 
 9. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didFinishLaunchingWithOptions**:
 
+#### Swift
 ```
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -123,13 +124,35 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
+#### Objective-C
+```
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    //-----------SMARTPUSH SECTION-----------
+    SmartpushSDK *shared = [SmartpushSDK sharedInstance];
+    [shared setDelegate:self];
+    [shared didFinishLaunchingWithOptions:launchOptions];
+    [shared registerForPushNotifications];
+
+    return YES;
+}
+```
+
 <br>
 
 10. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didFailToRegisterForRemoteNotificationsWithError**:
 
+#### Swift
 ```
 func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error:Error) {
     SmartpushSDK.sharedInstance().didFailToRegisterForRemoteNotificationsWithError(error)
+}
+```
+
+#### Objective-C
+```
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    [[SmartpushSDK sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
 }
 ```
 
@@ -137,9 +160,17 @@ func application(_ application: UIApplication, didFailToRegisterForRemoteNotific
 
 11. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didRegisterForRemoteNotificationsWithDeviceToken**:
 
+#### Swift
 ```
 func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
     SmartpushSDK.sharedInstance().didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
+}
+```
+
+#### Objective-C
+```
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken {
+    [[SmartpushSDK sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
 ```
 
@@ -147,9 +178,17 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 
 12. Ainda no arquivo **UIApplicationDelegate** adicione o código abaixo no corpo do método **didReceiveRemoteNotification**:
 
+#### Swift
 ```
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
     SmartpushSDK.sharedInstance().didReceiveRemoteNotification(userInfo)
+}
+```
+
+#### Objective-C
+```
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [[SmartpushSDK sharedInstance] didReceiveRemoteNotification:userInfo];
 }
 ```
 
@@ -157,9 +196,17 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 
 13. Ainda no arquivo **UIApplicationDelegate**, para compatibilidade como iOS8+, adicione o código abaixo no corpo do método **didRegisterUserNotificationSettings**:
 
+#### Swift
 ```
 func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
     SmartpushSDK.sharedInstance().didRegister(notificationSettings)
+}
+```
+
+#### Objective-C
+```
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings: (UIUserNotificationSettings *)notificationSettings {
+    [[SmartpushSDK sharedInstance] didRegisterUserNotificationSettings:notificationSettings];
 }
 ```
 
@@ -167,6 +214,7 @@ func application(_ application: UIApplication, didRegister notificationSettings:
 
 14. Para capturar e tratar as mensagens push recebidas, adicione o código no corpo do método **onPushAccepted** no arquivo **UIApplicationDelegate**. Este método será chamado sempre que uma notificação for recebida ou quando o aplicativo for aberto ao clicar em uma notificação:
 
+#### Swift
 ```
 func onPushAccepted(_ push: [AnyHashable: Any]!, andOpenFromPush openFromPush: Bool) {
     print("Push: \(push)")
@@ -177,10 +225,22 @@ func onPushAccepted(_ push: [AnyHashable : Any]!, andOpenFromPush openFromPush: 
 }
 ```
 
+#### Objective-C
+```
+- (void)onPushAccepted:(NSDictionary *)push andOpenFromPush:(BOOL) openFromPush {
+    NSLog(@"Push: %@", push);
+}
+
+- (void)onPushAccepted:(NSDictionary *)push andOpenFromPush:(BOOL) openFromPush withUri:(NSString*) uri {
+    NSLog(@"Push: %@", push);
+}
+```
+
 <br>
 
 15. Para que seu aplicativo receba as notificações pela central do iOS enquanto estiver em primeiro plano, importe **UserNotifications** e adicione o código no corpo do método **UIApplicationDelegate** no arquivo **UIApplicationDelegate**.
 
+#### Swift
 ```
 @available(iOS 10.0, *)
 func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
@@ -188,6 +248,12 @@ func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent noti
 }
 ```
 
+#### Objective-C
+```
+- (void) userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler  NS_AVAILABLE_IOS(10.0) {
+    completionHandler(UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound);
+}
+```
 
 **Pronto! A SDK SMARTPUSH está integrada a sua app! Sua app está pronta para receber mensagens push. Simples, não?**
 
@@ -199,10 +265,18 @@ A SDK provê mecanismos para que as apps possam criar e salvar tags, que depois 
 
 Para definir uma TAG de **String**, ou remove-la utilize o método abaixo:
 
+#### Swift
 ```
 SmartpushSDK.sharedInstance().setString("value", forTag: "key")
 SmartpushSDK.sharedInstance().delStringTag(key)
 ```  
+
+#### Objective-C
+```
+[[SmartpushSDK sharedInstance]setString:@"value" forTag:@"key"];
+[[SmartpushSDK sharedInstance]delStringTag:@"key"];
+```
+
 Exitem **5** tipos de TAGs que podem ser definidas:
 - **String**
 - **Number**
@@ -215,9 +289,15 @@ Exitem **5** tipos de TAGs que podem ser definidas:
 ### Blacklist
 A SDK provê mecanismos para que os usuários possam cancelar/ativar o recebimento de mensagens push. Para isso utilize o método abaixo:
 
+#### Swift
 ```
 SmartpushSDK.sharedInstance().blockUser(true)
 ```  
+
+#### Objective-C
+```
+[[SmartpushSDK sharedInstance]blockUser:true];
+```
 
 Para cancelar/ativar o recebimento de mensagens push, forneça um meio para que o usuário possa informar isso dentro do seu app. 
 
@@ -228,9 +308,15 @@ A SDK provê mecanismos para que possam ser disparadas campanhas de mensagens pu
 
 Para monitorar e permitir o envio de mensagens push quando seus usuários ingressarem em determinadas áreas, utilize o método abaixo:
 
+#### Swift
 ```
 SmartpushSDK.sharedInstance().nearestZone(withLatitude: 0.0, andLongitude: 0.0)
 ```  
+
+#### Objective-C
+```
+[[SmartpushSDK sharedInstance]nearestZoneWithLatitude:0.0 andLongitude:0.0];
+```
 
 ### Inbox - Acesso as últimas notificações
 
