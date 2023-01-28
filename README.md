@@ -104,7 +104,7 @@ recebimento;
 
 Se você ainda não criou os certificados [clique aqui](#configurar_apns)
 
-8. No arquivo **UIApplicationDelegate** implemente o delegate **SmartpushSDKDelegate**.
+8. Importe `#import <SmartpushSDK/SmartpushSDK.h>` no arquivo **AppDelegate** e implemente o delegate **SmartpushSDKDelegate**.
 
 <br>
 
